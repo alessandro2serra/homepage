@@ -23,6 +23,18 @@ new Vue({
         desc: "Arrange mosaics in space",
         tags: ["Geometry", "Physics", "Animation"],
         disabled: true
+      },
+      {
+        title: "Waste is a design mistake",
+        desc: "Explore sustainable material usage",
+        tags: ["Materials", "Crafts", "Sustainablity"],
+        disabled: true
+      },
+      {
+        title: "World without colors",
+        desc: "Emphatize and design for color blindness",
+        tags: ["Color", "Inclusive design"],
+        disabled: true
       }
     ],
     colors: [
@@ -42,11 +54,11 @@ new Vue({
       </div>
       <div class="main">
         <div>
-          <h2>Try out the interactive learning scenarios</h2>
+          <h2>Try out our interactive learning scenarios:</h2>
           <div class="cards">
             <div v-for="(card, i) in cards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
-              opacity: card.disabled ? 0.2 : 1,
+              opacity: card.disabled ? 0.3 : 1,
             }">
               <div>
                 <h2>{{ card.title }}</h2>

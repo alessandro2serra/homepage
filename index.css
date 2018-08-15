@@ -30,7 +30,9 @@ body {
 .main > div {
     width: var(--width);
 }
-
+.main h2 {
+    margin-bottom: 1.5rem;
+}
 .footer {
     padding: 3rem 0 7rem 0;
     display: flex;
@@ -44,14 +46,14 @@ body {
     justify-content: space-between;
 }
 
+/* Card */
+
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 13rem 13rem 13rem;
+    grid-template-rows: 11rem 11rem 11rem;
     grid-gap: 1rem;
 }
-
-/* Card */
 
 .card {
   background: var(--color-gray-dark);
@@ -60,8 +62,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.1s;
+  cursor: pointer;
 }
 
+.card:hover {
+    transform: scale(1.02);
+}
 .card h2 {
   color: var(--color-white);
   margin-bottom: 0.25rem;
