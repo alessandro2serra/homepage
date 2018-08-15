@@ -54,7 +54,7 @@ new Vue({
       </div>
       <div class="main">
         <div>
-          <h2>Try out our interactive learning scenarios:</h2>
+          <h2>Try out our interactive learning scenarios: </h2>
           <div class="cards">
             <div v-for="(card, i) in cards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
