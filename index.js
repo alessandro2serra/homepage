@@ -54,7 +54,7 @@ new Vue({
   },
   template: `
     <div>
-      <div class="header">
+      <div class="headr">
         <div>
           <h1>DesignSTEM</h1>
           <div class="intro">Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction.</div>

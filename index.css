@@ -4,21 +4,21 @@
 body {
     margin: 0;
 }
-.header {
+.headr {
     padding: 4rem 0 2rem 0;
     border-bottom: 3px solid var(--color-gray-dark);
     display: flex;
     justify-content: center;
 }
 
-.header > div {
+.headr > div {
     width: var(--width);
 }
 
-.header h1 {
+.headr h1 {
     font-size: 3rem;
 }
-.header .intro {
+.headr .intro {
     max-width: 60vw;
 }
 .main {
