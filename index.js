@@ -19,7 +19,7 @@ new Vue({
         desc:
           "Spin that record and learn about frequencies and early days of cinema",
         tags: ["Math", "Physics", "Animation"],
-        url: "https://designstem.github.io/vinylfrequency",
+        url: "https://designstem.github.io/vinylfrequency"
       },
       {
         title: "3D Tessellations",
@@ -34,9 +34,63 @@ new Vue({
         disabled: true
       },
       {
-        title: "World without colors",
+        title: "Different kind of colors",
         desc: "Emphatize and design for color blindness",
         tags: ["Color", "Inclusive design"],
+        disabled: true
+      },
+      {
+        title: "Robots on the Beach",
+        desc: "Build your own <i>strandbeest</i>",
+        tags: ["Crafts", "Physics", "Kinetics"],
+        disabled: true
+      },
+      {
+        title: "Painting with numbers",
+        desc: "Generate artwork from sensor signals",
+        tags: ["Generative art", "Sensors"],
+        disabled: true
+      },
+      {
+        title: "Buzzing Hexagons",
+        desc: "Learn about the divine geometry of beehives",
+        tags: ["Geometry", "Tesselation"],
+        disabled: true
+      },
+      {
+        title: "Call me Red, Green or Blue",
+        desc: "Build the RGB lamp for inner peace and enlightenment",
+        tags: ["Color", "Electronics", "Psychology"],
+        disabled: true
+      },
+      {
+        title: "Down the Spiral",
+        desc: "Learn about the divine geometry of spirals",
+        tags: ["Geometry", "3D Printing"],
+        disabled: true
+      },
+      {
+        title: "Blame it on the oven",
+        desc: "Pottery process with occasional explosions",
+        tags: ["Phyics", "Pottery"],
+        disabled: true
+      },
+      {
+        title: "Honey, I shrunk the...",
+        desc: "Scaling from Gulliver to Meirelles to AR",
+        tags: ["Geometry", "Human scale"],
+        disabled: true
+      },
+      {
+        title: "Construction of Chaos",
+        desc: "Learn about the divine architecture of nature",
+        tags: ["Material", "Construction"],
+        disabled: true
+      },
+      {
+        title: "Unbearable lightness of structures",
+        desc: "Lightness in all its forms",
+        tags: ["Material", "Construction"],
         disabled: true
       }
     ],
@@ -67,12 +121,13 @@ new Vue({
             <div v-for="(card, i) in cards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
               opacity: card.disabled ? 0.3 : 1,
+              cursor: card.disabled ? 'not-allowed' : 'pointer'
             }"
-            @click="go(card.url)"
+            @click="!card.disabled && card.url && go(card.url)"
             >
               <div>
                 <h2>{{ card.title }}</h2>
-                <p>{{ card.desc }}</p>
+                <p v-html="card.desc" />
               </div>
               <div class="tags">
                 <div class="tag" v-for="tag in card.tags">{{tag}}</div>
