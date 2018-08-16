@@ -19,7 +19,7 @@ new Vue({
         desc:
           "Spin that record and learn about frequencies and early days of cinema",
         tags: ["Math", "Physics", "Animation"],
-        disabled: true
+        url: "https://designstem.github.io/vinylfrequency",
       },
       {
         title: "3D Tessellations",
