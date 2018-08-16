@@ -5,18 +5,21 @@ new Vue({
       {
         title: "Looking for triangles",
         desc: "Build an bird nest box from classic Euclidean shapes",
-        tags: ["Geometry", "Crafts"]
+        tags: ["Geometry", "Crafts"],
+        url: "./triangles"
       },
       {
         title: "Smart Tattoo",
         desc: "Design a biosensor tattoo that helps to save lives",
-        tags: ["Biology", "Information design"]
+        tags: ["Biology", "Information design"],
+        url: "./tattoo"
       },
       {
         title: "Vinyl frequency",
         desc:
           "Spin that record and learn about frequencies and early days of cinema",
-        tags: ["Math", "Physics", "Animation"]
+        tags: ["Math", "Physics", "Animation"],
+        disabled: true
       },
       {
         title: "3D Tessellations",
@@ -44,6 +47,11 @@ new Vue({
       "var(--color-purple)"
     ]
   }),
+  methods: {
+    go(url) {
+      document.location = url;
+    }
+  },
   template: `
     <div>
       <div class="header">
@@ -59,7 +67,9 @@ new Vue({
             <div v-for="(card, i) in cards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
               opacity: card.disabled ? 0.3 : 1,
-            }">
+            }"
+            @click="go(card.url)"
+            >
               <div>
                 <h2>{{ card.title }}</h2>
                 <p>{{ card.desc }}</p>
