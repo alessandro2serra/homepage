@@ -1,4 +1,7 @@
+import Art2 from './components/Art2.js'
+
 new Vue({
+  components: { Art2 },
   el: "#app",
   data: () => ({
     cards: [
@@ -108,6 +111,7 @@ new Vue({
   },
   template: `
     <div>
+      <Art2 />
       <div class="headr">
         <div>
           <h1>DesignSTEM</h1>
