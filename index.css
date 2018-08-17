@@ -5,16 +5,17 @@ body {
     margin: 0;
 }
 .headr {
-    padding: 4rem 0 2rem 0;
+    height: 22rem;
     border-bottom: 3px solid var(--color-gray-dark);
     display: flex;
     justify-content: center;
-    background: var(--color-gray-dark);
+    align-items: flex-end;
     color: var(--color-white);
 }
 
 .headr > div {
     width: var(--width);
+    padding-bottom: 2rem;
 }
 
 .headr h1 {
@@ -25,7 +26,7 @@ body {
 }
 .main {
     padding: 3rem 0;
-    border-bottom: 3px solid var(--color-gray-dark);
+    border-bottom: 3px solid var(--color-gray-medium);
     display: flex;
     justify-content: center;
 }
@@ -39,6 +40,7 @@ body {
     padding: 3rem 0 7rem 0;
     display: flex;
     justify-content: center;
+    background: var(--color-gray-light);
 }
 
 .footer > div {

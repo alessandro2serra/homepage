@@ -1,7 +1,7 @@
-import Art2 from './components/Art2.js'
+import Art from './components/Art.js'
 
 new Vue({
-  components: { Art2 },
+  components: { Art },
   el: "#app",
   data: () => ({
     cards: [
@@ -110,8 +110,8 @@ new Vue({
     }
   },
   template: `
-    <div>
-      <Art2 />
+    <div style="overflow: hidden">
+      <Art style="position: absolute; top: 0, right: 0, left: 0; z-index: -1000"/>
       <div class="headr">
         <div>
           <h1>DesignSTEM</h1>

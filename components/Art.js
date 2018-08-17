@@ -6,45 +6,41 @@ export default {
     cy,
     t(x, y, r = 0) {
       return `translate(${x},${y})`;
+    },
+    points(r, count, rotate = 0) {
+      return Array.from({ length: 24 })
+        .slice(0, count)
+        .map((_, i) => {
+          return [
+            cx((360 / count) * i + rotate, r),
+            cy((360 / count) * i + rotate, r)
+          ].join(",");
+        })
+        .join(" ");
     }
   },
   mounted() {
     anime({
       targets: this,
-      step: 300
-    })
+      val: { value: 36, duration: 30000 },
+      rotate: { value: 360, duration: 30000 },
+      direction: "alternate",
+      loop: true,
+      easing: "easeInOutQuad"
+      //autoplay: false
+    });
   },
-  data: () => ({ step: 200, r: 0 }),
+  data: () => ({ val: 0, rotate: 0 }),
   template: ` 
     <div>
-    <svg width="1600" height="5rem" style="background: var(--color-gray-dark)">
-      <g :transform="t(-150,-150)">
-      <template v-for="(x,i) in 10">
-      <template v-for="(y,j) in 10">
-        <g :key="i + '-' + j" :transform="t(x * step, y * step, r)">
-          <!--circle
-            stroke-width="3" 
-            stroke="rgba(255,255,255,0.5)"
-            cx="0"
-            cy="0"
-            :r="step"
-            fill="none"
-          /-->
-          <template v-for="a in 6">
-          <circle
-            stroke-width="3" 
-            stroke="rgba(255,255,255,0.5)"
-            :cx="cx(r + (360/6*a),step)"
-            :cy="cy(r + (360/6*a),step)"
-            :r="step * 10"
-            fill="none"
-            opacity="0.5"
-          />
-          </template>
-        </g>
-      </template>
-      </template>
-        </g>
+    <svg width="1600" height="22rem" style="background: var(--color-gray-dark)">
+      <g :transform="t(-200,-100)">
+      <g v-for="y in 12" :transform="t(0,y * 157)">
+      <g v-for="x in 12" :transform="t(x * 182 + (y % 2 * (182 /2)),0)">
+        <polygon v-for="r in 16" :key="r" :points="points((r - val) * 6.35,6,rotate)" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none" :opacity="r / 12 / 1.2"/>
+      </g>
+      </g>
+      </g>
     </svg>    
     </div>
   `
