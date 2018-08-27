@@ -5,12 +5,12 @@ body {
     margin: 0;
 }
 .headr {
-    height: 22rem;
+    height: 15rem;
     border-bottom: 3px solid var(--color-gray-dark);
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: var(--color-white);
+    color: var(--color-gray-dark);
 }
 
 .headr > div {
@@ -108,4 +108,14 @@ body {
 }
 .tag:last-child {
     margin-right: 0;
+}
+
+.buttongroup_button_secondary {
+  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  border: 3px solid var(--color-gray-dark);
+  border-radius: var(--border-radius);
+  color: var(--color-gray-dark);
+  font-weight: bold;
+  font-size: 0.9rem;
 }

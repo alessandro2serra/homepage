@@ -1,9 +1,19 @@
-import Art from './components/Art.js'
+import Buttongroup from "./components/Buttongroup.js";
+
+const unique = array => [...new Set(array)]
+const flatten = array => [].concat(...array)
 
 new Vue({
-  components: { Art },
+  components: { Buttongroup },
   el: "#app",
+  computed: {
+    tags() {
+      return unique(flatten(this.cards.map(c => c.tags)))
+    }
+  },
   data: () => ({
+    activeType: 0,
+    types: ["All", "Math", "Biology", "Physics", "Geometry"],
     cards: [
       {
         title: "Looking for triangles",
@@ -111,7 +121,7 @@ new Vue({
   },
   template: `
     <div style="overflow: hidden">
-      <Art style="position: absolute; top: 0, right: 0, left: 0; z-index: -1000"/>
+      <!--Art style="position: absolute; top: 0, right: 0, left: 0; z-index: -1000"/-->
       <div class="headr">
         <div>
           <h1>DesignSTEM</h1>
@@ -121,6 +131,8 @@ new Vue({
       <div class="main">
         <div>
           <h2>Try out our interactive learning scenarios: </h2>
+          <Buttongroup :buttons="types" v-model="activeType" />
+          <br><br>
           <div class="cards">
             <div v-for="(card, i) in cards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
