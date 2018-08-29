@@ -133,7 +133,6 @@ new Vue({
       </div>
       <div class="main">
         <div>
-          <h2>Try out our interactive learning scenarios: </h2>
           <Buttons :buttons="types" v-model="activeType" />
           <br><br>
           <div class="cards">
