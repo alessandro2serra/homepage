@@ -5,12 +5,13 @@ body {
     margin: 0;
 }
 .headr {
-    height: 15rem;
-    border-bottom: 3px solid var(--color-gray-dark);
+    height: 25rem;
+    //border-bottom: 3px solid var(--color-gray-dark);
     display: flex;
     justify-content: center;
     align-items: flex-end;
     color: var(--color-gray-dark);
+    background: var(--color-yellow);
 }
 
 .headr > div {

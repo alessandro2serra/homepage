@@ -1,14 +1,15 @@
-import Buttongroup from "./components/Buttongroup.js";
+import Art from "./components/Art.js";
+import Buttons from "https://rawgit.com/designstem/style/master/components/Buttons.js";
 
 const unique = array => [...new Set(array)]
 const flatten = array => [].concat(...array)
 
 new Vue({
-  components: { Buttongroup },
+  components: { Buttons, Art },
   el: "#app",
   computed: {
     tags() {
-      return unique(flatten(this.cards.map(c => c.tags)))
+      return unique(flatten(this.cards.map(c => c.tags)));
     }
   },
   data: () => ({
@@ -121,9 +122,9 @@ new Vue({
   },
   template: `
     <div style="overflow: hidden">
-      <!--Art style="position: absolute; top: 0, right: 0, left: 0; z-index: -1000"/-->
       <div class="headr">
         <div>
+          <div style="margin-left: -1.5rem"><Art /></div>
           <h1>DesignSTEM</h1>
           <div class="intro">Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction.</div>
         </div>
@@ -131,7 +132,7 @@ new Vue({
       <div class="main">
         <div>
           <h2>Try out our interactive learning scenarios: </h2>
-          <Buttongroup :buttons="types" v-model="activeType" />
+          <Buttons :buttons="types" v-model="activeType" />
           <br><br>
           <div class="cards">
             <div v-for="(card, i) in cards" class="card" :style="{
