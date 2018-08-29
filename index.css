@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     color: var(--color-gray-dark);
-    //background: var(--color-yellow);
+    background: var(--color-yellow);
 }
 
 .headr > div {
