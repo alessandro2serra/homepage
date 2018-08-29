@@ -15,6 +15,7 @@ new Vue({
     }
   },
   data: () => ({
+    al: 0.5,
     activeType: 0,
     types: ["All", "Math", "Biology", "Physics", "Geometry"],
     cards: cards,
@@ -34,11 +35,15 @@ new Vue({
     <div style="overflow: hidden">
       <div class="headr">
         <div>
-          <div style="margin: 2rem 0 0 -1.5rem; display: flex">
-            <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" /></div>
+          <div class="slider">
+            <label>Color opacity: <code>{{Math.floor(al * 100)}}%</code></label>
+            <input type="range" v-model="al" min="0" max="1" step="0.01" />
+          </div>
+          <div class="arts">
+            <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" :al="al" /></div>
           </div>
           <h1>DesignSTEM</h1>
-          <h3>Real sciences for future designers and craftsmen.<br />Learn STEM topics in fun, visual and interactive way</h3>
+          <h2>Real sciences for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way</h2>
         </div>
       </div>
       <div class="main">
@@ -68,9 +73,9 @@ new Vue({
         <div>
           <div>
             <p>Project is supported by European Social Fund</p>
-            <p><a>Relevant</a>&nbsp; <a>Links</a>&nbsp; <a>Stay</a>&nbsp; <a>Here</a></p>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
           </div>
-          <img src="esf_logo.svg" style="width: 200px" />
+          <img src="esf_logo.svg" style="width:140px" />
         </div>
       </div>
 
