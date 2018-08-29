@@ -110,8 +110,8 @@ new Vue({
     ],
     colors: [
       "var(--color-red)",
-      "var(--color-brown)",
-      "var(--color-blue)",
+      "var(--color-blue-dark)",
+      "var(--color-blue-medium)",
       "var(--color-purple)"
     ]
   }),
@@ -124,9 +124,11 @@ new Vue({
     <div style="overflow: hidden">
       <div class="headr">
         <div>
-          <div style="margin-left: -1.5rem"><Art /></div>
+          <div style="margin: 2rem 0 0 -1.5rem; display: flex">
+            <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" /></div>
+          </div>
           <h1>DesignSTEM</h1>
-          <div class="intro">Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction. Here comes somewhat short, somewhat long introduction.</div>
+          <h3>Real sciences for future designers and craftsmen.<br />Learn STEM topics in fun, visual and interactive way</h3>
         </div>
       </div>
       <div class="main">

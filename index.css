@@ -5,8 +5,8 @@ body {
     margin: 0;
 }
 .headr {
-    height: 25rem;
-    //border-bottom: 3px solid var(--color-gray-dark);
+    //height: 25rem;
+    border-bottom: 3px solid var(--color-gray-dark);
     display: flex;
     justify-content: center;
     align-items: flex-end;
