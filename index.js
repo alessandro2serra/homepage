@@ -1,23 +1,42 @@
 import Art from "./components/Art.js";
 import Buttons from "https://rawgit.com/designstem/style/master/components/Buttons.js";
 
-import cards from "./cards.js"
+import cards from "./cards.js";
 
-const unique = array => [...new Set(array)]
-const flatten = array => [].concat(...array)
+const unique = array => [...new Set(array)];
+const flatten = array => [].concat(...array);
 
 new Vue({
   components: { Buttons, Art },
   el: "#app",
   computed: {
-    tags() {
-      return unique(flatten(this.cards.map(c => c.tags)));
+    sTags() {
+      return unique(flatten(this.cards.map(c => c.sTags)));
+    },
+    dTags() {
+      return unique(flatten(this.cards.map(c => c.dTags)));
+    },
+    sCards() {
+      if (this.sTag !== "All") {
+        return this.cards.filter(c => {
+          return c.sTags.findIndex(t => t == this.sTag) > -1;
+        });
+      }
+      return this.cards;
+    },
+    dCards() {
+      if (this.dTag !== "All") {
+        return this.sCards.filter(c => {
+          return c.dTags.findIndex(t => t == this.dTag) > -1;
+        });
+      }
+      return this.sCards;
     }
   },
   data: () => ({
     al: 0.5,
-    activeType: 0,
-    types: ["All", "Math", "Biology", "Physics", "Geometry"],
+    sTag: "All",
+    dTag: "All",
     cards: cards,
     colors: [
       "var(--color-red)",
@@ -35,10 +54,10 @@ new Vue({
     <div style="overflow: hidden">
       <div class="headr">
         <div>
-          <div class="slider">
+          <!--div class="slider">
             <label>Color opacity: <code>{{Math.floor(al * 100)}}%</code></label>
             <input type="range" v-model="al" min="0" max="1" step="0.01" />
-          </div>
+          </div-->
           <div class="arts">
             <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" :al="al" /></div>
           </div>
@@ -48,10 +67,25 @@ new Vue({
       </div>
       <div class="main">
         <div>
-          <Buttons :buttons="types" v-model="activeType" />
+          <div style="display: flex">
+            <div style="flex: 1; margin-right: 1rem;">
+              <h3>Select a STEM topic</h3>
+              <div style="display: flex; flex-wrap: wrap;">
+                <a :style="{color: sTag == 'All' ? 'var(--color-red)': '', borderColor: sTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
+                <a :style="{color: sTag == tag ? 'var(--color-red)': '', borderColor: sTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
+               </div>
+            </div>
+            <div style="flex: 1">
+              <h3>Select a design topic</h3>
+              <div style="display: flex; flex-wrap: wrap;">
+                <a :style="{color: dTag == 'All' ? 'var(--color-red)': '', borderColor: dTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>
+                <a :style="{color: dTag == tag ? 'var(--color-red)': '', borderColor: dTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
+              </div>
+            </div>
+          </div>
           <br><br>
           <div class="cards">
-            <div v-for="(card, i) in cards" class="card" :style="{
+            <div v-for="(card, i) in dCards" class="card" :style="{
               background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
               opacity: card.disabled ? 0.3 : 1,
               cursor: card.disabled ? 'not-allowed' : 'pointer'
@@ -63,7 +97,8 @@ new Vue({
                 <p v-html="card.desc" />
               </div>
               <div class="tags">
-                <div class="tag" v-for="tag in card.tags">{{tag}}</div>
+                <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
+                <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
               </div>
             </div>
           </div>
