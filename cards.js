@@ -31,7 +31,7 @@ export default [
   {
     title: "Waste is a design mistake",
     desc: "Explore sustainable material usage",
-    sTags: ["Material science"],
+    sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
     disabled: true
   },
@@ -80,7 +80,7 @@ export default [
   {
     title: "Blame it on the oven",
     desc: "Pottery process with occasional explosions",
-    sTags: ["Physics", "Material science"],
+    sTags: ["Physics", "Materials science"],
     dTags: ["Pottery"],
     disabled: true
   },
@@ -94,14 +94,14 @@ export default [
   {
     title: "Construction of Chaos",
     desc: "Learn about the divine architecture of nature",
-    sTags: ["Material science", "Engineering"],
+    sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design", "Biomimicry"],
     disabled: true
   },
   {
     title: "Unbearable lightness of structures",
     desc: "Lightness in all its forms",
-    sTags: ["Material science", "Engineering"],
+    sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design"],
     disabled: true
   }
