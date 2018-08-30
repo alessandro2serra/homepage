@@ -11,10 +11,14 @@ new Vue({
   el: "#app",
   computed: {
     sTags() {
-      return unique(flatten(this.cards.map(c => c.sTags)));
+      return unique(flatten(this.cards.map(c => c.sTags))).sort((a, b) =>
+        a.localeCompare(b)
+      );
     },
     dTags() {
-      return unique(flatten(this.cards.map(c => c.dTags)));
+      return unique(flatten(this.cards.map(c => c.dTags))).sort((a, b) =>
+        a.localeCompare(b)
+      );
     },
     sCards() {
       if (this.sTag !== "All") {
@@ -68,14 +72,14 @@ new Vue({
       <div class="main">
         <div>
           <div style="display: flex">
-            <div style="flex: 1; margin-right: 1rem;">
+            <div style="flex: 1;">
               <h3>Select a STEM topic</h3>
               <div style="display: flex; flex-wrap: wrap;">
                 <a :style="{color: sTag == 'All' ? 'var(--color-red)': '', borderColor: sTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
                 <a :style="{color: sTag == tag ? 'var(--color-red)': '', borderColor: sTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
                </div>
             </div>
-            <div style="flex: 1">
+            <div style="flex: 1; margin-left: 0.5rem;">
               <h3>Select a design topic</h3>
               <div style="display: flex; flex-wrap: wrap;">
                 <a :style="{color: dTag == 'All' ? 'var(--color-red)': '', borderColor: dTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>

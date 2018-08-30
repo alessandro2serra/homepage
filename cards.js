@@ -31,8 +31,8 @@ export default [
   {
     title: "Waste is a design mistake",
     desc: "Explore sustainable material usage",
-    sTags: ["Material sciene"],
-    dTags: ["Crafts", "Sustainable design", "Biomimicry"],
+    sTags: ["Material science"],
+    dTags: ["Crafts", "Sustainability", "Biomimicry"],
     disabled: true
   },
   {
