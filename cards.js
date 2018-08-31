@@ -1,6 +1,6 @@
 export default [
   {
-    title: "Looking for triangles",
+    title: "Looking for Triangles",
     desc: "Build an bird nest box from classic Euclidean shapes",
     sTags: ["Math", "Geometry", "Measurement"],
     dTags: ["Crafts", "Woodworking"],
@@ -14,9 +14,9 @@ export default [
     url: "./tattoo"
   },
   {
-    title: "Vinyl frequency",
+    title: "Frequency and Motion",
     desc:
-      "Spin that record and learn about frequencies and early days of cinema",
+      "From praxiscope to cinema to GIFs, learn the science behind the moving image",
     sTags: ["Math", "Physics", "Movement"],
     dTags: ["Animation"],
     url: "https://designstem.github.io/vinylfrequency"
@@ -29,15 +29,15 @@ export default [
     disabled: true
   },
   {
-    title: "Waste is a design mistake",
+    title: "Waste is a Design Mistake",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
     disabled: true
   },
   {
-    title: "Different kind of colors",
-    desc: "Emphatize and design for color blindness",
+    title: "Different Shades",
+    desc: "Emphatize with and design for color blindness",
     sTags: ["Biology", "Color perception"],
     dTags: ["Data visualization", "Inclusive design"],
     disabled: true
@@ -50,7 +50,7 @@ export default [
     disabled: true
   },
   {
-    title: "Painting with numbers",
+    title: "Painting with Numbers",
     desc: "Generate artwork from sensor signals",
     sTags: ["Physics", "Electronics"],
     dTags: ["Generative art"],
@@ -78,8 +78,8 @@ export default [
     disabled: true
   },
   {
-    title: "Blame it on the oven",
-    desc: "Pottery process with occasional explosions",
+    title: "Blame it on the Oven",
+    desc: "Pottery process simulation with occasional explosions",
     sTags: ["Physics", "Materials science"],
     dTags: ["Pottery"],
     disabled: true
@@ -99,7 +99,7 @@ export default [
     disabled: true
   },
   {
-    title: "Unbearable lightness of structures",
+    title: "Unbearable Lightness of Structures",
     desc: "Lightness in all its forms",
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design"],
