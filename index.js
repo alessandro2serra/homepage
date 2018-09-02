@@ -66,7 +66,7 @@ new Vue({
             <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" :al="al" /></div>
           </div>
           <h1>DesignSTEM</h1>
-          <h2>Real sciences for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way</h2>
+          <h2>Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way</h2>
         </div>
       </div>
       <div class="main">
@@ -111,10 +111,9 @@ new Vue({
       <div class="footer">
         <div>
           <div>
-            <p>Project is supported by European Social Fund</p>
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
           </div>
-          <img src="esf_logo.svg" style="width:140px" />
+          <img src="erasmus_logo.svg" style="width:240px" />
         </div>
       </div>
 
