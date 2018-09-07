@@ -22,11 +22,11 @@ export default [
     url: "https://designstem.github.io/vinylfrequency"
   },
   {
-    title: "3D Tessellations",
-    desc: "Arrange mosaics in space",
+    title: "Patterns & Tessellations",
+    desc: "Arrange mosaics and follow the bees",
     sTags: ["Math", "Geometry"],
     dTags: ["Interior design"],
-    disabled: true
+    url: "https://designstem.github.io/homepage/patterns/"
   },
   {
     title: "Waste is a Design Mistake",
