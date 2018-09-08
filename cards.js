@@ -33,7 +33,7 @@ export default [
     desc: "Learn about the divine geometry of beehives",
     sTags: ["Geometry", "Tesselation"],
     dTags: ["Graphic design"],
-    url: "https://designstem.github.io/homepage/hexangons/"
+    url: "https://designstem.github.io/homepage/hexagons/"
   },
   {
     title: "RGB lamp",
