@@ -23,10 +23,24 @@ export default [
   },
   {
     title: "Patterns & Tessellations",
-    desc: "Arrange mosaics and follow the bees",
+    desc: "Arrange mosaics. In space!",
     sTags: ["Math", "Geometry"],
     dTags: ["Interior design"],
     url: "https://designstem.github.io/homepage/patterns/"
+  },
+  {
+    title: "Of Bees and Hexagons",
+    desc: "Learn about the divine geometry of beehives",
+    sTags: ["Geometry", "Tesselation"],
+    dTags: ["Graphic design"],
+    url: "https://designstem.github.io/homepage/hexangons/"
+  },
+  {
+    title: "RGB lamp",
+    desc: "Build a light fixture for inner peace and enlightenment",
+    sTags: ["Color perception", "Electronics"],
+    dTags: ["Interior design"],
+    url: "https://designstem.github.io/homepage/rgblamp/"
   },
   {
     title: "Waste is a Design Mistake",
@@ -54,20 +68,6 @@ export default [
     desc: "Generate artwork from sensor signals",
     sTags: ["Physics", "Electronics"],
     dTags: ["Generative art"],
-    disabled: true
-  },
-  {
-    title: "Buzzing Hexagons",
-    desc: "Learn about the divine geometry of beehives",
-    sTags: ["Geometry", "Tesselation"],
-    dTags: ["Graphic design"],
-    disabled: true
-  },
-  {
-    title: "Call me Red, Green or Blue",
-    desc: "Build the RGB lamp for inner peace and enlightenment",
-    sTags: ["Color perception", "Electronics"],
-    dTags: ["Interior design"],
     disabled: true
   },
   {
