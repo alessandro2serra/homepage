@@ -104,7 +104,7 @@ body {
   justify-content: space-between;
   transition: all 0.1s;
   cursor: pointer;
-  height: 12rem;
+  height: 17rem;
 }
 
 .card:hover {
@@ -138,7 +138,6 @@ body {
   display: flex;
   opacity: 0.5;
   flex-wrap: wrap;
-  mmargin-top: 2rem;
 }
 
 .tag {

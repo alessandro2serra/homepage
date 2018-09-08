@@ -104,6 +104,12 @@ new Vue({
                 <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
                 <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
               </div>
+              <div style="line-height: 1.5em">
+                <div v-for="tool in card.tools">
+                  <a v-if="tool.url" style="color: white; border-color: white" :href="tool.url">{{tool.title}}</a>
+                  <div v-else style="color: rgba(255,255,255,0.5);">{{tool.title}}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
