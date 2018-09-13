@@ -90,7 +90,7 @@ new Vue({
           <br><br>
           <div class="cards">
             <div v-for="(card, i) in dCards" class="card" :style="{
-              background: card.disabled ? 'var(--color-gray-dark)' : colors[i % 5],
+              background: card.disabled ? 'var(--color-gray-dark)' : card.testable ? 'var(--color-red)' : 'var(--color-blue-medium)',
               opacity: card.disabled ? 0.3 : 1,
               cursor: card.disabled ? 'not-allowed' : 'pointer'
             }"
@@ -98,11 +98,11 @@ new Vue({
             >
               <div>
                 <h2>{{ card.title }}</h2>
-                <p v-html="card.desc" />
-              </div>
-              <div class="tags">
-                <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
-                <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
+                <p v-html="card.desc" style="margin-bottom: 0.5rem" />
+                <div class="tags" style="line-height: 1.5em">
+                  <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
+                  <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
+                </div>
               </div>
               <div style="line-height: 1.5em">
                 <div v-for="tool in card.tools">

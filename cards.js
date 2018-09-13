@@ -1,6 +1,7 @@
 export default [
   {
     title: "Looking for Triangles",
+    testable: true,
     desc: "Build an bird nest box from classic Euclidean shapes",
     sTags: ["Math", "Geometry", "Measurement"],
     dTags: ["Crafts", "Woodworking"],
@@ -18,6 +19,7 @@ export default [
   },
   {
     title: "Smart Tattoo",
+    testable: true,
     desc: "Design a biosensor tattoo that helps to save lives",
     sTags: ["Biology", "Health"],
     dTags: ["Graphic design", "Data visualization", "Inclusive design"],
@@ -35,6 +37,7 @@ export default [
   },
   {
     title: "Frequency and Motion",
+    testable: true,
     desc:
       "From praxiscope to cinema to GIFs, learn the science behind the moving image",
     sTags: ["Math", "Physics", "Movement"],
@@ -71,12 +74,43 @@ export default [
   {
     title: "Of Bees and Hexagons",
     desc: "Learn about the divine geometry of beehives",
-    sTags: ["Geometry", "Tesselation"],
+    sTags: ["Geometry"],
     dTags: ["Graphic design"],
     url: "./hexagons/",
     tools: [
       {
         title: "Hexagon generator?"
+      }
+    ]
+  },
+  {
+    title: "Robots on the Beach",
+    desc: "Build your own <i>strandbeest</i>",
+    sTags: ["Physics", "Kinetics", "Engineering"],
+    dTags: ["Crafts", "Woodworking"],
+    disabled: true,
+    tools: [
+      {
+        title: "Strandbeest leg simulator?"
+      }
+    ]
+  },
+  {
+    title: "Sun Shade",
+    desc: "Create a light-collecting lamp shade",
+    sTags: ["Geometry", "Electronics"],
+    dTags: ["Sustainability", "Interior design"],
+    url: "./sunshade/",
+    tools: [
+      {
+        title: "Lamp shade Designer",
+        url: "https://designstem.github.io/sunshade/"
+      },
+      {
+        title: "Sun to movement explan.?"
+      },
+      {
+        title: "Sensors to motors explan.?"
       }
     ]
   },
@@ -96,6 +130,30 @@ export default [
     ]
   },
   {
+    title: "Different Shades",
+    desc: "Color perception can play tricks with your mind",
+    sTags: ["Biology", "Color perception"],
+    dTags: ["Graphic design"],
+    disabled: true,
+    tools: [
+      {
+        title: "VR color simulation I",
+        url: "https://beat-bunker.net/tao/index1.html"
+      },
+      {
+        title: "VR color simulation II",
+        url: "https://beat-bunker.net/tao/index2.html"
+      }
+    ]
+  },
+  {
+    title: "Lost in Color",
+    desc: "Emphatize with and design for color blindness",
+    sTags: ["Biology", "Color perception"],
+    dTags: ["Data visualization", "Inclusive design"],
+    disabled: true
+  },
+  {
     title: "Waste is a Design Mistake",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
@@ -103,24 +161,10 @@ export default [
     disabled: true
   },
   {
-    title: "Different Shades",
-    desc: "Emphatize with and design for color blindness",
-    sTags: ["Biology", "Color perception"],
-    dTags: ["Data visualization", "Inclusive design"],
-    disabled: true
-  },
-  {
-    title: "Robots on the Beach",
-    desc: "Build your own <i>strandbeest</i>",
-    sTags: ["Physics", "Kinetics", "Engineering"],
-    dTags: ["Crafts", "Woodworking"],
-    disabled: true
-  },
-  {
-    title: "Painting with Numbers",
-    desc: "Generate artwork from sensor signals",
-    sTags: ["Physics", "Electronics"],
-    dTags: ["Generative art"],
+    title: "Waste is a Design Mistake II",
+    desc: "Explore sustainable material usage",
+    sTags: ["Materials science"],
+    dTags: ["Crafts", "Sustainability", "Biomimicry"],
     disabled: true
   },
   {
@@ -157,5 +201,19 @@ export default [
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design"],
     disabled: true
-  }
+  },
+  {
+    title: "The Grass is Always Greener in the Lab",
+    desc: "Pick colors, not mushrooms from the forest",
+    sTags: ["Biology", "Chemistry"],
+    dTags: ["Art"],
+    disabled: true
+  },
+  // {
+  //   title: "Painting with Numbers",
+  //   desc: "Generate artwork from sensor signals",
+  //   sTags: ["Physics", "Electronics"],
+  //   dTags: ["Generative art"],
+  //   disabled: true
+  // },
 ];
