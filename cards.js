@@ -2,6 +2,7 @@ export default [
   {
     title: "Looking for Triangles",
     status: 5,
+    flag: "🇪🇪",
     desc: "Build an bird nest box from classic Euclidean shapes",
     sTags: ["Math", "Geometry", "Measurement"],
     dTags: ["Crafts", "Woodworking"],
@@ -23,6 +24,7 @@ export default [
   {
     title: "Smart Tattoo",
     status: 5,
+    flag: "🇪🇪",
     desc: "Design a biosensor tattoo that helps to save lives",
     sTags: ["Biology", "Health"],
     dTags: ["Graphic design", "Data visualization", "Inclusive design"],
@@ -41,6 +43,7 @@ export default [
   {
     title: "Frequency and Motion",
     status: 5,
+    flag: "🇪🇪",
     desc:
       "From praxiscope to cinema to GIFs, learn the science behind the moving image",
     sTags: ["Math", "Physics", "Movement"],
@@ -64,6 +67,7 @@ export default [
   {
     title: "2D and 3D Patterns",
     status: 4,
+    flag: "🇳🇱",
     desc: "Arrange mosaics. In space!",
     sTags: ["Math", "Geometry"],
     dTags: ["Interior design"],
@@ -78,6 +82,7 @@ export default [
   {
     title: "Waste is a Design Mistake I",
     status: 4,
+    flag: "🇳🇱",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
@@ -108,6 +113,7 @@ export default [
   {
     title: "Waste is a Design Mistake II",
     status: 4,
+    flag: "🇳🇱",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
@@ -127,6 +133,7 @@ export default [
   {
     title: "Of Bees and Hexagons",
     status: 3,
+    flag: "🇮🇹",
     desc: "Learn about the divine geometry of beehives",
     sTags: ["Geometry"],
     dTags: ["Graphic design"],
@@ -140,6 +147,7 @@ export default [
   {
     title: "RGB lamp",
     status: 3,
+    flag: "🇮🇹",
     desc: "Build a light fixture for inner peace and enlightenment",
     sTags: ["Color perception", "Electronics"],
     dTags: ["Interior design"],
@@ -155,12 +163,54 @@ export default [
   },
   {
     title: "Down the Spiral",
-    status: 2,
+    status: 3,
+    flag: "🇮🇹",
     desc: "Learn about the divine geometry of spirals",
     sTags: ["Math", "Geometry"],
     dTags: ["Industrial design"],
     url:
-      "https://docs.google.com/document/d/13V_b3golWJJPawhdSGcm6XEPJ5_aU8RIQYjgFk6xGT0/edit"
+      "./spirals",
+    tools: [
+      { title: "Spiral generator?" },
+      { title: "3D printing plugins" },
+      { title: "Spiral math theory?" }
+    ]
+  },
+  {
+    title: "Lost in Color",
+    status: 3,
+    flag: "🇵🇹",
+    desc: "Emphatize with and design for color blindness",
+    sTags: ["Biology", "Color perception"],
+    dTags: ["Data visualization", "Inclusive design"],
+    url: "./colorblindness"
+  },
+  {
+    title: "Structure this",
+    status: 3,
+    flag: "🇵🇹",
+    desc: "Learn about the divine structures of nature",
+    sTags: ["Materials science", "Engineering"],
+    dTags: ["Industrial design", "Biomimicry"],
+    url: "./structures"
+  },
+  {
+    title: "Unbearable Lightness of Structures",
+    status: 3,
+    flag: "🇵🇹",
+    desc: "Lightness in all its forms",
+    sTags: ["Materials science", "Engineering"],
+    dTags: ["Industrial design"],
+    url: "./lightness"
+  },
+  {
+    title: "Universe of Colors",
+    status: 3,
+    flag: "🇵🇹",
+    desc: "AVAColor, the divine color of everything",
+    sTags: ["Color perception"],
+    dTags: ["Graphic design"],
+    url: "./avacolor"
   },
   {
     title: "Sun Shade",
@@ -181,38 +231,6 @@ export default [
         title: "Sensors to motors explan.?"
       }
     ]
-  },
-  {
-    title: "Lost in Color",
-    status: 3,
-    desc: "Emphatize with and design for color blindness",
-    sTags: ["Biology", "Color perception"],
-    dTags: ["Data visualization", "Inclusive design"],
-    url: "./colorblindness"
-  },
-  {
-    title: "Structure this",
-    status: 3,
-    desc: "Learn about the divine structures of nature",
-    sTags: ["Materials science", "Engineering"],
-    dTags: ["Industrial design", "Biomimicry"],
-    url: "./structures"
-  },
-  {
-    title: "Unbearable Lightness of Structures",
-    status: 3,
-    desc: "Lightness in all its forms",
-    sTags: ["Materials science", "Engineering"],
-    dTags: ["Industrial design"],
-    url: "./lightness"
-  },
-  {
-    title: "Universe of Colors",
-    status: 3,
-    desc: "AVAColor, the divine color of everything",
-    sTags: ["Color perception"],
-    dTags: ["Graphic design"],
-    url: "./avacolor"
   },
   {
     title: "Robots on the Beach",
@@ -236,6 +254,7 @@ export default [
   {
     title: "Different Shades",
     status: 2,
+    flag: "🇵🇹",
     desc: "Color perception can play tricks with your mind",
     sTags: ["Biology", "Color perception"],
     dTags: ["Graphic design"],
@@ -271,33 +290,26 @@ export default [
       "https://docs.google.com/document/d/1XRSWG1_K6ywmj2eyJRaLfBfDxUxEOO9kw_1CriHrMPs/edit#heading=h.etpbq8nkojs9",
     tools: [
       {
-        title: 'Kazimir Malevich simulator?',
-        url: 'http://www.paberimuuseum.ee/disainiABC/site/1-2-3/index.html'
+        title: "Kazimir Malevich simulator?",
+        url: "http://www.paberimuuseum.ee/disainiABC/site/1-2-3/index.html"
       },
       {
-        title: 'AR measurement tool?'
+        title: "AR measurement tool?"
       }
     ]
-    },
+  },
   {
     title: "The Grass is Always Greener in the Lab",
     status: 1,
+    flag: "🇵🇹",
     desc: "Pick colors, not mushrooms from the forest",
     sTags: ["Biology", "Chemistry"],
     dTags: ["Art"]
   },
   {
-    title: "Painting with Numbers",
-    status: 0,
-    desc: "Generate artwork from sensor signals",
-    sTags: ["Physics", "Electronics"],
-    dTags: ["Generative art"],
-    url:
-      "https://docs.google.com/document/d/1tmn3O3Nau4DwxkBk8TffBvZ1i3_F1MAW8Frh2FlK3sw/edit"
-  },
-  {
     title: "Algorithms we live by",
     status: 0,
+    flag: "🇮🇹",
     desc: "Algorithms are all around us!",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
@@ -307,6 +319,7 @@ export default [
   {
     title: "Decision tree",
     status: 0,
+    flag: "🇮🇹",
     desc: "Who decides what?",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
@@ -316,10 +329,18 @@ export default [
   {
     title: "Software Engineering",
     status: 0,
+    flag: "🇮🇹",
     desc: "Systematic application of scientific technological knowledge...",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
     url:
       "https://drive.google.com/file/d/1Vxz7vk48TUoPf0l3MACSPM3z6z3b6KEA/view?usp=sharing"
+  },
+  {
+    title: "Take it easing, brother",
+    status: 0,
+    desc: "From Disney classics to speedy cards",
+    sTags: ["Physics", "Math"],
+    dTags: ["Animation"]
   }
 ];
