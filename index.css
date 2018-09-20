@@ -104,7 +104,7 @@ body {
   justify-content: space-between;
   transition: all 0.1s;
   cursor: pointer;
-  height: 16rem;
+  height: 18rem;
 }
 
 .card:hover {
@@ -147,4 +147,16 @@ body {
 }
 .tag:last-child {
   margin-right: 0;
+}
+
+/* Status */
+
+.status {
+  display: inline;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border: 2px solid white;
 }
