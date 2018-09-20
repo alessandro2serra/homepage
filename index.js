@@ -42,11 +42,13 @@ new Vue({
     sTag: "All",
     dTag: "All",
     cards: cards,
-    colors: [
-      "var(--color-red)",
-      "var(--color-blue-dark)",
-      "var(--color-blue-medium)",
-      "var(--color-purple)"
+    statuses: [
+      { title: "Unknown", color: "var(--color-gray-medium)" },
+      { title: "Needs scenario", color: "var(--color-gray-medium)" },
+      { title: "Has scenario", color: "var(--color-gray-dark)" },
+      { title: "Early slides", color: "var(--color-blue-dark)" },
+      { title: "Slides and explorables", color: "var(--color-purple)" },
+      { title: "Tested, needs work", color: "var(--color-red)" }
     ]
   }),
   methods: {
@@ -58,10 +60,6 @@ new Vue({
     <div style="overflow: hidden">
       <div class="headr">
         <div>
-          <!--div class="slider">
-            <label>Color opacity: <code>{{Math.floor(al * 100)}}%</code></label>
-            <input type="range" v-model="al" min="0" max="1" step="0.01" />
-          </div-->
           <div class="arts">
             <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" :al="al" /></div>
           </div>
@@ -88,16 +86,18 @@ new Vue({
             </div>
           </div>
           <br><br>
+          <h2>{{ dCards.length }} {{ dCards.length > 1 ? 'scenarios' : 'scenario'}} </h2>
           <div class="cards">
             <div v-for="(card, i) in dCards" class="card" :style="{
-              background: card.disabled ? 'var(--color-gray-dark)' : card.testable ? 'var(--color-red)' : 'var(--color-blue-medium)',
-              opacity: card.disabled ? 0.3 : 1,
-              cursor: card.disabled ? 'not-allowed' : 'pointer'
+              background: statuses[card.status].color,
+              cursor: card.status < 2 ? 'not-allowed' : 'pointer',
+              border: card.url ? '3px solid black' : 'none'
             }"
             @click="!card.disabled && card.url && go(card.url)"
             >
               <div>
-                <h2>{{ card.title }}</h2>
+                <div class="status">{{ statuses[card.status].title }}</div>
+                <h2 style="margin-top: 0.5rem">{{ card.title }}</h2>
                 <p v-html="card.desc" style="margin-bottom: 0.5rem" />
                 <div class="tags" style="line-height: 1.5em">
                   <div class="tag" v-for="tag in card.sTags">{{tag}}</div>

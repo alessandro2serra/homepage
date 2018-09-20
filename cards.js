@@ -1,7 +1,7 @@
 export default [
   {
     title: "Looking for Triangles",
-    testable: true,
+    status: 5,
     desc: "Build an bird nest box from classic Euclidean shapes",
     sTags: ["Math", "Geometry", "Measurement"],
     dTags: ["Crafts", "Woodworking"],
@@ -14,12 +14,15 @@ export default [
       {
         title: "Corner Calculator",
         url: "https://designstem.github.io/triangles_corner-cut"
+      },
+      {
+        title: "Geometry theory"
       }
     ]
   },
   {
     title: "Smart Tattoo",
-    testable: true,
+    status: 5,
     desc: "Design a biosensor tattoo that helps to save lives",
     sTags: ["Biology", "Health"],
     dTags: ["Graphic design", "Data visualization", "Inclusive design"],
@@ -37,7 +40,7 @@ export default [
   },
   {
     title: "Frequency and Motion",
-    testable: true,
+    status: 5,
     desc:
       "From praxiscope to cinema to GIFs, learn the science behind the moving image",
     sTags: ["Math", "Physics", "Movement"],
@@ -60,6 +63,7 @@ export default [
   },
   {
     title: "2D and 3D Patterns",
+    status: 4,
     desc: "Arrange mosaics. In space!",
     sTags: ["Math", "Geometry"],
     dTags: ["Interior design"],
@@ -72,7 +76,57 @@ export default [
     ]
   },
   {
+    title: "Waste is a Design Mistake I",
+    status: 4,
+    desc: "Explore sustainable material usage",
+    sTags: ["Materials science"],
+    dTags: ["Crafts", "Sustainability", "Biomimicry"],
+    url: "./waste1/",
+    tools: [
+      {
+        title: "Egg packaging printout?",
+        url:
+          "https://drive.google.com/drive/u/0/folders/1WtgIwTBTh0AZmebznz5GKKlR7QvMJkN-"
+      },
+      {
+        title: "Eggfall printout?",
+        url:
+          "https://drive.google.com/drive/u/0/folders/1WtgIwTBTh0AZmebznz5GKKlR7QvMJkN-"
+      },
+      {
+        title: "Peer review printout?",
+        url:
+          "https://drive.google.com/drive/u/0/folders/1WtgIwTBTh0AZmebznz5GKKlR7QvMJkN-"
+      },
+      {
+        title: "Material tool for Android?",
+        url:
+          "https://drive.google.com/drive/u/0/folders/1vOoeG-AE33QVxaxvthUt7BZ7REzemXrG"
+      }
+    ]
+  },
+  {
+    title: "Waste is a Design Mistake II",
+    status: 4,
+    desc: "Explore sustainable material usage",
+    sTags: ["Materials science"],
+    dTags: ["Crafts", "Sustainability", "Biomimicry"],
+    url: "./waste2/",
+    tools: [
+      {
+        title: "Materials database",
+        url: "https://flaxchairscenario.wordpress.com/material/"
+      },
+      {
+        title: "Material properties theory",
+        url:
+          "https://drive.google.com/file/d/108VuowfUm0zURnixE85DqBoTNZWLqF8w/view"
+      }
+    ]
+  },
+  {
     title: "Of Bees and Hexagons",
+    status: 3,
     desc: "Learn about the divine geometry of beehives",
     sTags: ["Geometry"],
     dTags: ["Graphic design"],
@@ -85,6 +139,7 @@ export default [
   },
   {
     title: "Robots on the Beach",
+    status: 2,
     desc: "Build your own <i>strandbeest</i>",
     sTags: ["Physics", "Kinetics", "Engineering"],
     dTags: ["Crafts", "Woodworking"],
@@ -97,6 +152,7 @@ export default [
   },
   {
     title: "Sun Shade",
+    status: 3,
     desc: "Create a light-collecting lamp shade",
     sTags: ["Geometry", "Electronics"],
     dTags: ["Sustainability", "Interior design"],
@@ -116,6 +172,7 @@ export default [
   },
   {
     title: "RGB lamp",
+    status: 3,
     desc: "Build a light fixture for inner peace and enlightenment",
     sTags: ["Color perception", "Electronics"],
     dTags: ["Interior design"],
@@ -131,10 +188,10 @@ export default [
   },
   {
     title: "Different Shades",
+    status: 2,
     desc: "Color perception can play tricks with your mind",
     sTags: ["Biology", "Color perception"],
     dTags: ["Graphic design"],
-    disabled: true,
     tools: [
       {
         title: "VR color simulation I",
@@ -148,72 +205,69 @@ export default [
   },
   {
     title: "Lost in Color",
+    status: 3,
     desc: "Emphatize with and design for color blindness",
     sTags: ["Biology", "Color perception"],
     dTags: ["Data visualization", "Inclusive design"],
-    disabled: true
-  },
-  {
-    title: "Waste is a Design Mistake",
-    desc: "Explore sustainable material usage",
-    sTags: ["Materials science"],
-    dTags: ["Crafts", "Sustainability", "Biomimicry"],
-    disabled: true
-  },
-  {
-    title: "Waste is a Design Mistake II",
-    desc: "Explore sustainable material usage",
-    sTags: ["Materials science"],
-    dTags: ["Crafts", "Sustainability", "Biomimicry"],
-    disabled: true
+    url: './colorblindness'
+
   },
   {
     title: "Down the Spiral",
+    status: 2,
     desc: "Learn about the divine geometry of spirals",
     sTags: ["Math", "Geometry"],
-    dTags: ["Industrial design"],
-    disabled: true
+    dTags: ["Industrial design"]
   },
   {
     title: "Blame it on the Oven",
+    status: 1,
     desc: "Pottery process simulation with occasional explosions",
     sTags: ["Physics", "Materials science"],
-    dTags: ["Pottery"],
-    disabled: true
+    dTags: ["Pottery"]
   },
   {
     title: "Honey, I shrunk the...",
+    status: 2,
     desc: "Scaling from Gulliver to Meirelles to AR",
     sTags: ["Math", "Geometry"],
-    dTags: ["Inclusive design"],
-    disabled: true
+    dTags: ["Inclusive design"]
   },
   {
-    title: "Construction of Chaos",
-    desc: "Learn about the divine architecture of nature",
+    title: "Structure this",
+    status: 3,
+    desc: "Learn about the divine structures of nature",
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design", "Biomimicry"],
-    disabled: true
+    url: './structures'
   },
   {
     title: "Unbearable Lightness of Structures",
+    status: 3,
     desc: "Lightness in all its forms",
     sTags: ["Materials science", "Engineering"],
-    dTags: ["Industrial design"],
-    disabled: true
+    dTags: ["Industrial design"]
   },
   {
     title: "The Grass is Always Greener in the Lab",
+    status: 1,
     desc: "Pick colors, not mushrooms from the forest",
     sTags: ["Biology", "Chemistry"],
-    dTags: ["Art"],
-    disabled: true
+    dTags: ["Art"]
   },
-  // {
-  //   title: "Painting with Numbers",
-  //   desc: "Generate artwork from sensor signals",
-  //   sTags: ["Physics", "Electronics"],
-  //   dTags: ["Generative art"],
-  //   disabled: true
-  // },
+  {
+    title: "Painting with Numbers",
+    status: 1,
+    desc: "Generate artwork from sensor signals",
+    sTags: ["Physics", "Electronics"],
+    dTags: ["Generative art"]
+  },
+  {
+    title: "Universe of Colors",
+    status: 3,
+    desc: "AVAColor, the divine color of everything",
+    sTags: ["Color perception"],
+    dTags: ["Graphic design"],
+    url: './avacolor'
+  }
 ];
