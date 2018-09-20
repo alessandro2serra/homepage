@@ -138,17 +138,29 @@ export default [
     ]
   },
   {
-    title: "Robots on the Beach",
-    status: 2,
-    desc: "Build your own <i>strandbeest</i>",
-    sTags: ["Physics", "Kinetics", "Engineering"],
-    dTags: ["Crafts", "Woodworking"],
-    disabled: true,
+    title: "RGB lamp",
+    status: 3,
+    desc: "Build a light fixture for inner peace and enlightenment",
+    sTags: ["Color perception", "Electronics"],
+    dTags: ["Interior design"],
+    url: "./rgblamp/",
     tools: [
       {
-        title: "Strandbeest leg simulator?"
+        title: "RGB/CMY color mixer?"
+      },
+      {
+        title: "Color vision simulator?"
       }
     ]
+  },
+  {
+    title: "Down the Spiral",
+    status: 2,
+    desc: "Learn about the divine geometry of spirals",
+    sTags: ["Math", "Geometry"],
+    dTags: ["Industrial design"],
+    url:
+      "https://docs.google.com/document/d/13V_b3golWJJPawhdSGcm6XEPJ5_aU8RIQYjgFk6xGT0/edit"
   },
   {
     title: "Sun Shade",
@@ -171,18 +183,53 @@ export default [
     ]
   },
   {
-    title: "RGB lamp",
+    title: "Lost in Color",
     status: 3,
-    desc: "Build a light fixture for inner peace and enlightenment",
-    sTags: ["Color perception", "Electronics"],
-    dTags: ["Interior design"],
-    url: "./rgblamp/",
+    desc: "Emphatize with and design for color blindness",
+    sTags: ["Biology", "Color perception"],
+    dTags: ["Data visualization", "Inclusive design"],
+    url: "./colorblindness"
+  },
+  {
+    title: "Structure this",
+    status: 3,
+    desc: "Learn about the divine structures of nature",
+    sTags: ["Materials science", "Engineering"],
+    dTags: ["Industrial design", "Biomimicry"],
+    url: "./structures"
+  },
+  {
+    title: "Unbearable Lightness of Structures",
+    status: 3,
+    desc: "Lightness in all its forms",
+    sTags: ["Materials science", "Engineering"],
+    dTags: ["Industrial design"],
+    url: "./lightness"
+  },
+  {
+    title: "Universe of Colors",
+    status: 3,
+    desc: "AVAColor, the divine color of everything",
+    sTags: ["Color perception"],
+    dTags: ["Graphic design"],
+    url: "./avacolor"
+  },
+  {
+    title: "Robots on the Beach",
+    status: 2,
+    desc: "Build your own <i>strandbeest</i>",
+    sTags: ["Physics", "Kinetics", "Engineering"],
+    dTags: ["Crafts", "Woodworking"],
+    url:
+      "https://docs.google.com/document/d/1Pk33eU1oFa2gCrD-Pw1S_dqlZ8VaXh3zWDYtp5aL5-U/edit#heading=h.vsb1ca6g3k9",
     tools: [
       {
-        title: "RGB/CMY color mixer?"
+        title: "Strandbeest video?",
+        url:
+          "https://drive.google.com/drive/u/0/folders/13Jgp5LReedQ0k8Ab123tLIv1XQsyjGiT"
       },
       {
-        title: "Color vision simulator?"
+        title: "Strandbeest leg simulator?"
       }
     ]
   },
@@ -192,6 +239,8 @@ export default [
     desc: "Color perception can play tricks with your mind",
     sTags: ["Biology", "Color perception"],
     dTags: ["Graphic design"],
+    url:
+      "https://docs.google.com/document/d/1nVJBcXRB0Vpi_cvFZ84FGhB_jn8FBMuXgSmZ1xYkzVA/edit",
     tools: [
       {
         title: "VR color simulation I",
@@ -204,50 +253,32 @@ export default [
     ]
   },
   {
-    title: "Lost in Color",
-    status: 3,
-    desc: "Emphatize with and design for color blindness",
-    sTags: ["Biology", "Color perception"],
-    dTags: ["Data visualization", "Inclusive design"],
-    url: './colorblindness'
-
-  },
-  {
-    title: "Down the Spiral",
-    status: 2,
-    desc: "Learn about the divine geometry of spirals",
-    sTags: ["Math", "Geometry"],
-    dTags: ["Industrial design"]
-  },
-  {
     title: "Blame it on the Oven",
-    status: 1,
+    status: 2,
     desc: "Pottery process simulation with occasional explosions",
     sTags: ["Physics", "Materials science"],
-    dTags: ["Pottery"]
+    dTags: ["Pottery"],
+    url:
+      "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3"
   },
   {
     title: "Honey, I shrunk the...",
     status: 2,
     desc: "Scaling from Gulliver to Meirelles to AR",
     sTags: ["Math", "Geometry"],
-    dTags: ["Inclusive design"]
-  },
-  {
-    title: "Structure this",
-    status: 3,
-    desc: "Learn about the divine structures of nature",
-    sTags: ["Materials science", "Engineering"],
-    dTags: ["Industrial design", "Biomimicry"],
-    url: './structures'
-  },
-  {
-    title: "Unbearable Lightness of Structures",
-    status: 3,
-    desc: "Lightness in all its forms",
-    sTags: ["Materials science", "Engineering"],
-    dTags: ["Industrial design"]
-  },
+    dTags: ["Inclusive design"],
+    url:
+      "https://docs.google.com/document/d/1XRSWG1_K6ywmj2eyJRaLfBfDxUxEOO9kw_1CriHrMPs/edit#heading=h.etpbq8nkojs9",
+    tools: [
+      {
+        title: 'Kazimir Malevich simulator?',
+        url: 'http://www.paberimuuseum.ee/disainiABC/site/1-2-3/index.html'
+      },
+      {
+        title: 'AR measurement tool?'
+      }
+    ]
+    },
   {
     title: "The Grass is Always Greener in the Lab",
     status: 1,
@@ -257,17 +288,38 @@ export default [
   },
   {
     title: "Painting with Numbers",
-    status: 1,
+    status: 0,
     desc: "Generate artwork from sensor signals",
     sTags: ["Physics", "Electronics"],
-    dTags: ["Generative art"]
+    dTags: ["Generative art"],
+    url:
+      "https://docs.google.com/document/d/1tmn3O3Nau4DwxkBk8TffBvZ1i3_F1MAW8Frh2FlK3sw/edit"
   },
   {
-    title: "Universe of Colors",
-    status: 3,
-    desc: "AVAColor, the divine color of everything",
-    sTags: ["Color perception"],
-    dTags: ["Graphic design"],
-    url: './avacolor'
+    title: "Algorithms we live by",
+    status: 0,
+    desc: "Algorithms are all around us!",
+    sTags: ["Computer Science"],
+    dTags: ["Generative art"],
+    url:
+      "https://drive.google.com/file/d/1TKNAfHL1FihtzjvbGIl2tOKtLEHEwrO9/view?usp=sharing"
+  },
+  {
+    title: "Decision tree",
+    status: 0,
+    desc: "Who decides what?",
+    sTags: ["Computer Science"],
+    dTags: ["Generative art"],
+    url:
+      "https://drive.google.com/file/d/1bcjN2JHBggbe6JQjbSj8uJKgiX2XdwJ-/view?usp=sharing"
+  },
+  {
+    title: "Software Engineering",
+    status: 0,
+    desc: "Systematic application of scientific technological knowledge...",
+    sTags: ["Computer Science"],
+    dTags: ["Generative art"],
+    url:
+      "https://drive.google.com/file/d/1Vxz7vk48TUoPf0l3MACSPM3z6z3b6KEA/view?usp=sharing"
   }
 ];

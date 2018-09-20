@@ -43,9 +43,9 @@ new Vue({
     dTag: "All",
     cards: cards,
     statuses: [
-      { title: "Unknown", color: "var(--color-gray-medium)" },
-      { title: "Needs scenario", color: "var(--color-gray-medium)" },
-      { title: "Has scenario", color: "var(--color-gray-dark)" },
+      { title: "Unknown", color: "#eaeaea" },
+      { title: "Needs scenario", color: "#cacaca" },
+      { title: "Has scenario", color: "var(--color-gray-medium)" },
       { title: "Early slides", color: "var(--color-blue-dark)" },
       { title: "Slides and explorables", color: "var(--color-purple)" },
       { title: "Tested, needs work", color: "var(--color-red)" }
@@ -90,8 +90,7 @@ new Vue({
           <div class="cards">
             <div v-for="(card, i) in dCards" class="card" :style="{
               background: statuses[card.status].color,
-              cursor: card.status < 2 ? 'not-allowed' : 'pointer',
-              border: card.url ? '3px solid black' : 'none'
+              cursor: !card.url ? 'not-allowed' : 'pointer',
             }"
             @click="!card.disabled && card.url && go(card.url)"
             >
