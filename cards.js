@@ -192,8 +192,7 @@ export default [
     desc: "Algorithms are all around us!",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
-    url:
-      "https://drive.google.com/file/d/1TKNAfHL1FihtzjvbGIl2tOKtLEHEwrO9/view?usp=sharing",
+    url: "./algorithms",
     tools: [
       {
         title: "Algorithm explorer?"
@@ -364,6 +363,14 @@ export default [
         title: "AR measurement tool?"
       }
     ]
+  },
+  {
+    title: "Origami and paper",
+    movietitle: "...Origami and paper",
+    status: 1,
+    desc: "Model anything using just a plain paper",
+    sTags: ["Math", "Geometry"],
+    dTags: ["Product design"],
   },
   {
     title: "Easing",
