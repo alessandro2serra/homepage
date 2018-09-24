@@ -47,7 +47,7 @@ new Vue({
       { title: "Needs scenario", color: "#cacaca" },
       { title: "Has scenario", color: "var(--color-gray-medium)" },
       { title: "Early slides", color: "var(--color-blue-dark)" },
-      { title: "Slides and explorables", color: "var(--color-purple)" },
+      { title: "Slides + interactives", color: "var(--color-purple)" },
       { title: "Tested, needs work", color: "var(--color-red)" }
     ]
   }),
@@ -95,11 +95,9 @@ new Vue({
             @click="!card.disabled && card.url && go(card.url)"
             >
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="margin: -0.5rem 0 1rem 0; color: white">{{ card.flag }}</div>
                 <div class="status">{{ statuses[card.status].title }}</div>
-                <div style="font-size: 1.5rem; color: white;">{{ card.flag }}</div>
-                </div> 
-                <h2 style="margin-top: 0.5rem">{{ card.title }}</h2>
+                <h2 style="margin-top: 0.75rem">{{ card.title }}</h2>
                 <!--p v-html="card.desc" style="margin-bottom: 0.5rem" /-->
                 <div class="tags" style="line-height: 1.5em">
                   <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
