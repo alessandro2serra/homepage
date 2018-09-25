@@ -166,6 +166,9 @@ export default [
       },
       {
         title: "Color vision simulator?"
+      },
+      {
+        title: "Electronics theory?"
       }
     ]
   },
@@ -312,6 +315,9 @@ export default [
       },
       {
         title: "Sensors to motors explan.?"
+      },
+      {
+        title: "Electronics theory?"
       }
     ]
   },
@@ -334,16 +340,6 @@ export default [
         title: "Strandbeest leg simulator?"
       }
     ]
-  },
-  {
-    title: "Pottery Simulator",
-    movietitle: "Blame it on the Oven",
-    status: 2,
-    desc: "Pottery simulation with occasional explosions",
-    sTags: ["Physics", "Materials science"],
-    dTags: ["Pottery"],
-    url:
-      "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3"
   },
   {
     title: "Scaling",
@@ -371,6 +367,16 @@ export default [
     desc: "Model anything using just a plain paper",
     sTags: ["Math", "Geometry"],
     dTags: ["Product design"],
+  },
+  {
+    title: "Pottery Simulator",
+    movietitle: "Blame it on the Oven",
+    status: 0,
+    desc: "Pottery simulation with occasional explosions",
+    sTags: ["Physics", "Materials science"],
+    dTags: ["Pottery"],
+    url:
+      "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3"
   },
   {
     title: "Easing",
