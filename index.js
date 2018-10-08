@@ -1,5 +1,5 @@
 import Art from "./components/Art.js";
-import Buttons from "https://rawgit.com/designstem/style/master/components/Buttons.js";
+import Buttons from "https://rawgit.com/designstem/framework/master/components/Buttons.js";
 
 import cards from "./cards.js";
 
