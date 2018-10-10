@@ -3,7 +3,7 @@ export default [
     title: "2D and 3D Patterns",
     movietitle: "...2D and 3D Patterns",
     status: 4,
-    flag: "Amsterdam workshop 🇳🇱",
+    workshop: "Amsterdam workshop",
     desc: "Arrange mosaics. In space!",
     sTags: ["Math", "Geometry"],
     dTags: ["Interior design"],
@@ -13,13 +13,14 @@ export default [
         title: "Pattern Designer",
         url: "https://designstem.github.io/patterns_editor/"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Waste is a Design Mistake I",
     movietitle: "...Waste is a Design Mistake I",
     status: 4,
-    flag: "Amsterdam workshop 🇳🇱",
+    workshop: "Amsterdam workshop",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
@@ -45,13 +46,14 @@ export default [
         url:
           "https://drive.google.com/drive/u/0/folders/1vOoeG-AE33QVxaxvthUt7BZ7REzemXrG"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Waste is a Design Mistake II",
     movietitle: "...Waste is a Design Mistake II",
     status: 4,
-    flag: "Amsterdam workshop 🇳🇱",
+    workshop: "Amsterdam workshop",
     desc: "Explore sustainable material usage",
     sTags: ["Materials science"],
     dTags: ["Crafts", "Sustainability", "Biomimicry"],
@@ -66,13 +68,14 @@ export default [
         url:
           "https://drive.google.com/file/d/108VuowfUm0zURnixE85DqBoTNZWLqF8w/view"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Looking for Triangles",
     movietitle: "...Looking for Triangles",
     status: 4,
-    flag: "Tartu presentation  🇪🇪",
+    workshop: "Tartu presentation",
     desc: "Build an bird nest box from classic Euclidean shapes",
     sTags: ["Math", "Geometry", "Measurement"],
     dTags: ["Crafts", "Woodworking"],
@@ -89,13 +92,14 @@ export default [
       {
         title: "Geometry theory"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Smart Tattoo",
     movietitle: "...Smart Tattoo",
     status: 4,
-    flag: "Tartu presentation 🇪🇪",
+    workshop: "Tartu presentation",
     desc: "Design a biosensor tattoo that helps to save lives",
     sTags: ["Biology", "Health"],
     dTags: ["Graphic design", "Data visualization", "Inclusive design"],
@@ -109,13 +113,14 @@ export default [
         title: "Tattoo designer",
         url: "https://designstem.github.io/smart_tattoo/"
       }
-    ]
+    ],
+    country: 'Finland'
   },
   {
     title: "Frequency and Motion",
     movietitle: "...Frequency and Motion",
     status: 4,
-    flag: "Tartu presentation 🇪🇪",
+    workshop: "Tartu presentation",
     desc:
       "From praxiscope to cinema to GIFs, learn the science behind the moving image",
     sTags: ["Math", "Physics", "Movement"],
@@ -134,13 +139,14 @@ export default [
         title: "Platter PDF generator",
         url: "https://github.com/designstem/vinylfrequency/tree/master/paper"
       }
-    ]
+    ],
+    country: 'Kuressaare'
   },
   {
     title: "Bees and Hexagons",
     movietitle: "...Bees and Hexagons",
     status: 3,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Learn about the divine geometry of beehives",
     sTags: ["Geometry"],
     dTags: ["Graphic design"],
@@ -149,13 +155,14 @@ export default [
       {
         title: "Hexagon generator?"
       }
-    ]
+    ],
+    country: 'Italy'
   },
   {
     title: "RGB lamp",
     movietitle: "...RGB lamp",
     status: 3,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Build a light fixture for inner peace and enlightenment",
     sTags: ["Color perception", "Electronics"],
     dTags: ["Interior design"],
@@ -170,13 +177,14 @@ export default [
       {
         title: "Electronics theory?"
       }
-    ]
+    ],
+    country: 'Italy'
   },
   {
     title: "Spirals",
     movietitle: "Down the Spiral",
     status: 3,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Learn about the divine geometry of spirals",
     sTags: ["Math", "Geometry"],
     dTags: ["Industrial design"],
@@ -185,13 +193,14 @@ export default [
       { title: "Spiral generator?" },
       { title: "3D printing plugins?" },
       { title: "Spiral functions theory?" }
-    ]
+    ],
+    country: 'Greece'
   },
   {
     title: "Algorithms",
     movietitle: "Algorithms we live by",
     status: 3,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Algorithms are all around us!",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
@@ -203,75 +212,82 @@ export default [
       {
         title: "Parametric / generative design tool?"
       }
-    ]
+    ],
+    country: 'Slovenia'
   },
   {
     title: "Decision tree",
     movietitle: "...Decision tree",
     status: 0,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Who decides what?",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
     url:
-      "https://drive.google.com/file/d/1bcjN2JHBggbe6JQjbSj8uJKgiX2XdwJ-/view?usp=sharing"
+      "https://drive.google.com/file/d/1bcjN2JHBggbe6JQjbSj8uJKgiX2XdwJ-/view?usp=sharing",
+    country: 'Slovenia'
   },
   {
     title: "Software Engineering",
     movietitle: "...Software Engineering",
     status: 0,
-    flag: "Trento workshop 🇮🇹",
+    workshop: "Trento workshop",
     desc: "Systematic application of scientific technological knowledge...",
     sTags: ["Computer Science"],
     dTags: ["Generative art"],
     url:
-      "https://drive.google.com/file/d/1Vxz7vk48TUoPf0l3MACSPM3z6z3b6KEA/view?usp=sharing"
+      "https://drive.google.com/file/d/1Vxz7vk48TUoPf0l3MACSPM3z6z3b6KEA/view?usp=sharing",
+    country: 'Slovenia'
   },
   {
     title: "Structures",
     movietitle: "...Structures",
     status: 3,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "Learn about the divine structures of nature",
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design", "Biomimicry"],
-    url: "./structures"
+    url: "./structures",
+    country: 'Portugal'
   },
   {
     title: "Lightness",
     movietitle: "Unbearable Lightness of Structures",
     status: 3,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "Lightness in all its forms",
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design"],
-    url: "./lightness"
+    url: "./lightness",
+    country: 'Portugal'
   },
   {
     title: "AVAColor",
     movietitle: "Universe of Colors",
     status: 3,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "All around the color globe",
     sTags: ["Color perception"],
     dTags: ["Graphic design"],
-    url: "./avacolor"
+    url: "./avacolor",
+    country: 'Portugal'
   },
   {
     title: "Color blindness",
     movietitle: "Lost in Color",
     status: 3,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "Emphatize with and design for color blindness",
     sTags: ["Biology", "Color perception"],
     dTags: ["Data visualization", "Inclusive design"],
-    url: "./colorblindness"
+    url: "./colorblindness",
+    country: 'Germany'
   },
   {
     title: "Color Perception",
     movietitle: "Different Kind of Blue",
     status: 2,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "Color can be both absolute and relative",
     sTags: ["Biology", "Color perception"],
     dTags: ["Graphic design"],
@@ -286,16 +302,18 @@ export default [
         title: "VR color simulation II",
         url: "https://beat-bunker.net/tao/index2.html"
       }
-    ]
+    ],
+    country: 'Germany'
   },
   {
     title: "Colors from Nature",
     movietitle: "The Grass is Always Greener in the Lab",
     status: 1,
-    flag: "Bragança workshop 🇵🇹",
+    workshop: "Bragança workshop",
     desc: "Pick colors, not mushrooms from the forest",
     sTags: ["Biology", "Chemistry"],
-    dTags: ["Art"]
+    dTags: ["Art"],
+    country: 'England'
   },
   {
     title: "Sunshade",
@@ -319,7 +337,8 @@ export default [
       {
         title: "Electronics theory?"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Strandbeest",
@@ -339,7 +358,8 @@ export default [
       {
         title: "Strandbeest leg simulator?"
       }
-    ]
+    ],
+    country: 'Netherlands'
   },
   {
     title: "Scaling",
@@ -358,7 +378,8 @@ export default [
       {
         title: "AR measurement tool?"
       }
-    ]
+    ],
+    country: 'Tartu'
   },
   {
     title: "Origami and paper",
@@ -367,6 +388,7 @@ export default [
     desc: "Model anything using just a plain paper",
     sTags: ["Math", "Geometry"],
     dTags: ["Product design"],
+    country: 'Tartu'
   },
   {
     title: "Pottery Simulator",
@@ -376,7 +398,8 @@ export default [
     sTags: ["Physics", "Materials science"],
     dTags: ["Pottery"],
     url:
-      "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3"
+      "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3",
+    country: 'Kuressaare'
   },
   {
     title: "Easing",
@@ -384,6 +407,13 @@ export default [
     status: 0,
     desc: "From Disney classics to speedy cards",
     sTags: ["Physics", "Math"],
-    dTags: ["Animation"]
+    dTags: ["Animation"],
+    tools: [
+      {
+        title: "Easing visualizer",
+        url: "https://designstem.github.io/easing/"
+      }
+    ],
+    country: 'Kuressaare',
   }
 ];

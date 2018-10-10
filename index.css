@@ -104,7 +104,7 @@ body {
   justify-content: space-between;
   transition: all 0.1s;
   cursor: pointer;
-  height: 18rem;
+  height: 20rem;
 }
 
 .card:hover {

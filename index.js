@@ -6,6 +6,19 @@ import cards from "./cards.js";
 const unique = array => [...new Set(array)];
 const flatten = array => [].concat(...array);
 
+const flags = {
+  Kuresaare: '🇪🇪',
+  Tartu: '🇪🇪',
+  Portugal: '🇵🇹',
+  Netherlands: '🇳🇱',
+  Germany: '🇩🇪',
+  Slovenia: '🇸🇮',
+  Portugal: '🇵🇹',
+  England: '🇬🇧',
+  Greece: '🇬🇷',
+  Italy: '🇮🇹'
+}
+
 new Vue({
   components: { Buttons, Art },
   el: "#app",
@@ -38,6 +51,7 @@ new Vue({
     }
   },
   data: () => ({
+    flags: flags,
     al: 0.5,
     sTag: "All",
     dTag: "All",
@@ -95,10 +109,14 @@ new Vue({
             @click="!card.disabled && card.url && go(card.url)"
             >
               <div>
-                <div style="margin: -0.5rem 0 1rem 0; color: white">{{ card.flag }}</div>
+                <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }} <br> {{ card.workshop }}</div>
+                
                 <div class="status">{{ statuses[card.status].title }}</div>
+                                
                 <h2 style="margin-top: 0.75rem">{{ card.title }}</h2>
+                
                 <!--p v-html="card.desc" style="margin-bottom: 0.5rem" /-->
+
                 <div class="tags" style="line-height: 1.5em">
                   <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
                   <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
