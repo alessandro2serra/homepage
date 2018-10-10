@@ -154,7 +154,7 @@ new Vue({
 
       <div style="width: 100vw; padding: 2rem;">
 
-      <a id="stats"><h2>Breakdown by country</h2></a>
+      <a id="breakdown"><h2>Breakdown by country</h2></a>
         <div v-for="c in Object.keys(flags)">
             <div style="display: flex; padding: 1rem; border-bottom: 1px solid var(--color-gray-medium);">
               <div style="flex: 2">
@@ -164,7 +164,7 @@ new Vue({
                 <h3>{{ dCards.filter(card => card.country == c).map(card => card.title).length }}</h3>
               </div>
               <div style="flex: 15">
-                {{ dCards.filter(card => card.country == c).map(card => card.title).join(', ') }}
+                {{ dCards.filter(card => card.country == c).map(card => card.title).join(' ') }}
               </div>
             </div>
         </div>

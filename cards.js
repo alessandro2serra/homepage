@@ -181,6 +181,18 @@ export default [
     country: 'Italy'
   },
   {
+    title: "Lighter than Air / Equilibrium",
+    movietitle: "Lighter than Air",
+    status: 2,
+    workshop: "Trento workshop",
+    desc: "Learn about the divine chemistry",
+    sTags: ["Chemistry"],
+    dTags: [],
+    //url: "./equilibrium",
+    url: "https://docs.google.com/document/d/1R2QktmGMmtKOzIfPiy_7ObubdxOsLPI7Aqok4GGGlEM/edit",
+    country: 'Italy'
+  },
+  {
     title: "Spirals",
     movietitle: "Down the Spiral",
     status: 3,
