@@ -7,22 +7,32 @@ const unique = array => [...new Set(array)];
 const flatten = array => [].concat(...array);
 
 const flags = {
-  Kuresaare: '🇪🇪',
-  Tartu: '🇪🇪',
-  Portugal: '🇵🇹',
-  Netherlands: '🇳🇱',
-  Germany: '🇩🇪',
-  Slovenia: '🇸🇮',
-  Portugal: '🇵🇹',
   England: '🇬🇧',
+  Germany: '🇩🇪',
   Greece: '🇬🇷',
-  Italy: '🇮🇹'
+  Italy: '🇮🇹',
+  Kuressaare: '🇪🇪',
+  Netherlands: '🇳🇱',
+  Portugal: '🇵🇹',
+  Slovenia: '🇸🇮',
+  Tartu: '🇪🇪',
 }
 
 new Vue({
   components: { Buttons, Art },
   el: "#app",
   computed: {
+    // workshops() {
+    //   return unique(flatten(this.cards.map(c => c.workshop))).sort((a, b) =>
+    //     a.localeCompare(b)
+    //   );
+    // },
+    workshops() {
+      return [
+        'Amsterdam workshop','Tartu presentation','Trento workshop',
+        'Bragança workshop', 'No workshop'
+      ]
+    },
     sTags() {
       return unique(flatten(this.cards.map(c => c.sTags))).sort((a, b) =>
         a.localeCompare(b)
@@ -100,16 +110,21 @@ new Vue({
             </div>
           </div>
           <br><br>
-          <h2>{{ dCards.length }} {{ dCards.length > 1 ? 'scenarios' : 'scenario'}} </h2>
+
+          <!--h2>{{ dCards.length }} scenarios </h2-->
+          
+          <div v-for="workshop in workshops">
+          <br />
+          <h2>{{ workshop }}</h2>
           <div class="cards">
-            <div v-for="(card, i) in dCards" class="card" :style="{
+            <div v-for="(card, i) in dCards.filter(c => c.workshop == workshop)" class="card" :style="{
               background: statuses[card.status].color,
               cursor: !card.url ? 'not-allowed' : 'pointer',
             }"
             @click="!card.disabled && card.url && go(card.url)"
             >
               <div>
-                <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }} <br> {{ card.workshop }}</div>
+                <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
                 
                 <div class="status">{{ statuses[card.status].title }}</div>
                                 
@@ -130,8 +145,31 @@ new Vue({
               </div>
             </div>
           </div>
+
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div style="width: 100vw; padding: 2rem;">
+
+      <a id="stats"><h2>Breakdown by country</h2></a>
+        <div v-for="c in Object.keys(flags)">
+            <div style="display: flex; padding: 1rem; border-bottom: 1px solid var(--color-gray-medium);">
+              <div style="flex: 2">
+                {{ flags[c] }} {{ c }}
+              </div>
+              <div style="flex: 1">
+                <h3>{{ dCards.filter(card => card.country == c).map(card => card.title).length }}</h3>
+              </div>
+              <div style="flex: 15">
+                {{ dCards.filter(card => card.country == c).map(card => card.title).join(', ') }}
+              </div>
+            </div>
         </div>
       </div>
+
       <div class="footer">
         <div>
           <div>
