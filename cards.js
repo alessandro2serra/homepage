@@ -202,9 +202,10 @@ export default [
     dTags: ["Industrial design"],
     url: "./spirals",
     tools: [
-      { title: "Spiral generator?" },
-      { title: "3D printing plugins?" },
-      { title: "Spiral functions theory?" }
+      {
+        title: 'Spirals Website',
+        url: 'https://spiralsdesignstem.wordpress.com/'
+      }
     ],
     country: 'Greece'
   },
