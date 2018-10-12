@@ -14,7 +14,7 @@ export default [
         url: "https://designstem.github.io/patterns_editor/"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Waste is a Design Mistake I",
@@ -47,7 +47,7 @@ export default [
           "https://drive.google.com/drive/u/0/folders/1vOoeG-AE33QVxaxvthUt7BZ7REzemXrG"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Waste is a Design Mistake II",
@@ -69,7 +69,7 @@ export default [
           "https://drive.google.com/file/d/108VuowfUm0zURnixE85DqBoTNZWLqF8w/view"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Looking for Triangles",
@@ -93,7 +93,7 @@ export default [
         title: "Geometry theory"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Smart Tattoo",
@@ -114,7 +114,7 @@ export default [
         url: "https://designstem.github.io/smart_tattoo/"
       }
     ],
-    country: 'Finland'
+    country: "Finland"
   },
   {
     title: "Frequency and Motion",
@@ -140,7 +140,7 @@ export default [
         url: "https://github.com/designstem/vinylfrequency/tree/master/paper"
       }
     ],
-    country: 'Kuressaare'
+    country: "Kuressaare"
   },
   {
     title: "Bees and Hexagons",
@@ -156,7 +156,7 @@ export default [
         title: "Hexagon generator?"
       }
     ],
-    country: 'Italy'
+    country: "Italy"
   },
   {
     title: "RGB lamp",
@@ -178,7 +178,7 @@ export default [
         title: "Electronics theory?"
       }
     ],
-    country: 'Italy'
+    country: "Italy"
   },
   {
     title: "Lighter than Air / Equilibrium",
@@ -190,11 +190,11 @@ export default [
     dTags: [],
     url: "./equilibrium",
     //url: "https://docs.google.com/document/d/1R2QktmGMmtKOzIfPiy_7ObubdxOsLPI7Aqok4GGGlEM/edit",
-    country: 'Italy',
+    country: "Italy",
     tools: [
-      { title: 'Visual narration of light objects?' },
-      { title: 'Lemmings game?' },
-      { title: 'Reaction formula game?' }
+      { title: "Visual narration of light objects?" },
+      { title: "Lemmings game?" },
+      { title: "Reaction formula game?" }
     ]
   },
   {
@@ -208,11 +208,11 @@ export default [
     url: "./spirals",
     tools: [
       {
-        title: 'Spirals Website',
-        url: 'https://spiralsdesignstem.wordpress.com/'
+        title: "Spirals Website",
+        url: "https://spiralsdesignstem.wordpress.com/"
       }
     ],
-    country: 'Greece'
+    country: "Greece"
   },
   {
     title: "Algorithms",
@@ -231,7 +231,7 @@ export default [
         title: "Parametric / generative design tool?"
       }
     ],
-    country: 'Slovenia'
+    country: "Slovenia"
   },
   {
     title: "Decision tree",
@@ -243,7 +243,7 @@ export default [
     dTags: ["Generative art"],
     url:
       "https://drive.google.com/file/d/1bcjN2JHBggbe6JQjbSj8uJKgiX2XdwJ-/view?usp=sharing",
-    country: 'Slovenia'
+    country: "Slovenia"
   },
   {
     title: "Software Engineering",
@@ -255,7 +255,7 @@ export default [
     dTags: ["Generative art"],
     url:
       "https://drive.google.com/file/d/1Vxz7vk48TUoPf0l3MACSPM3z6z3b6KEA/view?usp=sharing",
-    country: 'Slovenia'
+    country: "Slovenia"
   },
   {
     title: "Structures",
@@ -266,7 +266,7 @@ export default [
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design", "Biomimicry"],
     url: "./structures",
-    country: 'Portugal'
+    country: "Portugal"
   },
   {
     title: "Lightness",
@@ -277,7 +277,7 @@ export default [
     sTags: ["Materials science", "Engineering"],
     dTags: ["Industrial design"],
     url: "./lightness",
-    country: 'Portugal'
+    country: "Portugal"
   },
   {
     title: "AVAColor",
@@ -288,7 +288,7 @@ export default [
     sTags: ["Color perception"],
     dTags: ["Graphic design"],
     url: "./avacolor",
-    country: 'Portugal'
+    country: "Portugal"
   },
   {
     title: "Color blindness",
@@ -299,7 +299,7 @@ export default [
     sTags: ["Biology", "Color perception"],
     dTags: ["Data visualization", "Inclusive design"],
     url: "./colorblindness",
-    country: 'Germany'
+    country: "Germany"
   },
   {
     title: "Color Perception",
@@ -321,7 +321,7 @@ export default [
         url: "https://beat-bunker.net/tao/index2.html"
       }
     ],
-    country: 'Germany'
+    country: "Germany"
   },
   {
     title: "Colors from Nature",
@@ -331,7 +331,7 @@ export default [
     desc: "Pick colors, not mushrooms from the forest",
     sTags: ["Biology", "Chemistry"],
     dTags: ["Art"],
-    country: 'England'
+    country: "England"
   },
   {
     title: "Sunshade",
@@ -357,7 +357,7 @@ export default [
         title: "Electronics theory?"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Strandbeest",
@@ -379,7 +379,7 @@ export default [
         title: "Strandbeest leg simulator?"
       }
     ],
-    country: 'Netherlands'
+    country: "Netherlands"
   },
   {
     title: "Scaling",
@@ -400,7 +400,7 @@ export default [
         title: "AR measurement tool?"
       }
     ],
-    country: 'Tartu'
+    country: "Tartu"
   },
   {
     title: "Origami and paper",
@@ -410,7 +410,7 @@ export default [
     desc: "Model anything using just a plain paper",
     sTags: ["Math", "Geometry"],
     dTags: ["Product design"],
-    country: 'Tartu'
+    country: "Tartu"
   },
   {
     title: "Pottery Simulator",
@@ -422,7 +422,7 @@ export default [
     dTags: ["Pottery"],
     url:
       "https://docs.google.com/document/d/12G-MPLOSsHHTTjGzS9uD6-8jzXmuS86TPd00PllAZSo/edit#heading=h.9ybqmh3odlr3",
-    country: 'Kuressaare'
+    country: "Kuressaare"
   },
   {
     title: "Easing",
@@ -438,6 +438,17 @@ export default [
         url: "https://designstem.github.io/easing/"
       }
     ],
-    country: 'Kuressaare',
+    country: "Kuressaare"
+  },
+  {
+    title: "Bits and colors",
+    movietitle: "Bit my Color",
+    status: 0,
+    workshop: "Other experiments",
+    desc: "This is why RGB is ugly",
+    sTags: ["Physics", "Math"],
+    dTags: ["Color"],
+    url: "https://designstem.github.io/colorbits",
+    country: "Kuressaare"
   }
 ];

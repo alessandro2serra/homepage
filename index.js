@@ -30,7 +30,7 @@ new Vue({
     workshops() {
       return [
         'Amsterdam workshop','Tartu presentation','Trento workshop',
-        'Bragança workshop', 'No workshop'
+        'Bragança workshop', 'No workshop','Other experiments'
       ]
     },
     sTags() {
