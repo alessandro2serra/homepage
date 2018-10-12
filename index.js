@@ -82,40 +82,99 @@ new Vue({
   },
   template: `
     <div style="overflow: hidden">
-      <div class="headr">
-        <div>
-          <div class="arts">
-            <div v-for="c in [8,4,3]" style="margin-left: -1.5rem"><Art :c="c" :al="al" /></div>
+      <header style="">
+        &nbsp;
+        <a href="https://github.com/designstem" style="border: none;">
+        <img src="https://rawgit.com/designstem/framework/master/images/github_logo.svg" style="
+          width: 1.75rem;
+          height: 1.75rem;
+          opacity: 0.7;
+        " />
+        </a>
+      </header>
+      
+      <div class="hero" style="
+       background: var(--color-gray-darker);
+      ">
+        <div style="display: flex">
+          <h1 style="color: var(--color-yellow)">DesignSTEM</h1>
+          <div style="margin: -2rem 0 0 0"><Art :c="6" :al="al" /></div>
+        </div>
+        <h2 style="color: var(--color-yellow)">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h2>
+      </div>
+
+      <div style="
+        padding: 2.5rem;
+        display: flex;
+        background: var(--color-yellow);
+      "
+      >
+      <div style="flex: 1; margin-right: 2rem;">
+          <a href="#scenarios">
+            <div class="button_primary" style="font-size: 1.2rem;">
+            Learning scenarios ↓
+            </div>
+          </a>
+          <br><br>
+          <div class="intro">
+            {{ dCards.length }} learning scenarios, ready to be used in a classroom. Suitable for design and STEM students and covering a wide range of mediums: digital, tangible, VR and more.
           </div>
-          <h1>DesignSTEM</h1>
-          <h2>Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way</h2>
+        </div>
+        <div style="flex: 1; margin-right: 2rem;">
+          <a href="https://designstem.github.io/framework">
+            <div class="button_primary" style="font-size: 1.2rem;">
+            Web framework →
+            </div>
+          </a>
+          <br><br>
+          <div class="intro">
+            We gathered all our custom tooling to a web framework, a MIT-licenced set of free components, styling and utilities for all the educators and creative coders to use.
+          </div>
+        </div>
+        <div style="flex: 1">
+        <a href="https://designstem.github.io/editor">
+            <div class="button_primary" style="font-size: 1.2rem;">
+              Content editor →
+            </div>
+          </a>
+          <br><br>
+          <div class="intro">
+            Building off the framework, here is the simple but powerful content editor, based on Markdown and our custom components.
+          </div>
         </div>
       </div>
-      <div class="main">
-        <div>
-          <div style="display: flex">
-            <div style="flex: 1;">
-              <h3>Select a STEM topic</h3>
-              <div style="display: flex; flex-wrap: wrap;">
-                <a :style="{color: sTag == 'All' ? 'var(--color-red)': '', borderColor: sTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
-                <a :style="{color: sTag == tag ? 'var(--color-red)': '', borderColor: sTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
-               </div>
-            </div>
-            <div style="flex: 1; margin-left: 0.5rem;">
-              <h3>Select a design topic</h3>
-              <div style="display: flex; flex-wrap: wrap;">
-                <a :style="{color: dTag == 'All' ? 'var(--color-red)': '', borderColor: dTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>
-                <a :style="{color: dTag == tag ? 'var(--color-red)': '', borderColor: dTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
-              </div>
-            </div>
-          </div>
-          <br><br>
 
-          <!--h2>{{ dCards.length }} scenarios </h2-->
-          
+      <div style="
+        padding: 2.5rem;
+        border-top: 3px solid var(--color-gray-dark)"
+      >
+      <a id="scenarios"><h1>Scenario progress tracker</h1></a>
+
+      <div style="
+        display: flex;
+      ">
+        <div style="flex: 1;">
+          <h3>Select a STEM topic</h3>
+          <div style="display: flex; flex-wrap: wrap;">
+            <a :style="{color: sTag == 'All' ? 'var(--color-red)': '', borderColor: sTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
+            <a :style="{color: sTag == tag ? 'var(--color-red)': '', borderColor: sTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
+            </div>
+        </div>
+        <div style="flex: 1; margin-left: 0.5rem;">
+          <h3>Select a design topic</h3>
+          <div style="display: flex; flex-wrap: wrap;">
+            <a :style="{color: dTag == 'All' ? 'var(--color-red)': '', borderColor: dTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>
+            <a :style="{color: dTag == tag ? 'var(--color-red)': '', borderColor: dTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div>          
           <div v-for="workshop in workshops">
           <br />
-          <h2>{{ workshop }}</h2>
+          <a :id="workshop.replace(/\\s+/g,'-')"><h2>{{ workshop }}</h2></a>
           <div class="cards">
             <div v-for="(card, i) in dCards.filter(c => c.workshop == workshop)" class="card" :style="{
               background: statuses[card.status].color,
@@ -154,7 +213,7 @@ new Vue({
 
       <div style="width: 100vw; padding: 2rem;">
 
-      <a id="breakdown"><h2>Breakdown by country</h2></a>
+      <a id="breakdown"><h2>Scenario breakdown by country</h2></a>
         <div v-for="c in Object.keys(flags)">
             <div style="display: flex; padding: 1rem; border-bottom: 1px solid var(--color-gray-medium);">
               <div style="flex: 2">
@@ -170,14 +229,22 @@ new Vue({
         </div>
       </div>
 
-      <div class="footer">
-        <div>
-          <div>
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-          </div>
-          <img src="erasmus_logo.svg" style="width:240px" />
-        </div>
+    <div class="footer">
+      <div>
+        <p>
+          All code is licenced under
+          <a href="https://choosealicense.com/licenses/mit/" rel="licence">
+            MIT licence
+          </a>.
+          All content is licenced under
+          <br>
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            Creative Commons Attribution 4.0 International License
+          </a>.
+        </p>
       </div>
+      <img src="https://rawgit.com/designstem/framework/master/images/erasmus_logo.svg" style="width:240px" />
+    </div>
 
     </div>
   `
