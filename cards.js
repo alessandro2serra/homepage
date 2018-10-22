@@ -362,13 +362,13 @@ export default [
   {
     title: "Strandbeest",
     movietitle: "Robots on the Beach",
-    status: 2,
+    status: 3,
     workshop: "No workshop",
     desc: "Build your own robot on the beach",
     sTags: ["Physics", "Kinetics", "Engineering"],
     dTags: ["Crafts", "Woodworking"],
     url:
-      "https://docs.google.com/document/d/1Pk33eU1oFa2gCrD-Pw1S_dqlZ8VaXh3zWDYtp5aL5-U/edit#heading=h.vsb1ca6g3k9",
+      "./strandbeest",
     tools: [
       {
         title: "Strandbeest video?",
