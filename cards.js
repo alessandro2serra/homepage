@@ -413,6 +413,17 @@ export default [
     country: "Tartu"
   },
   {
+    title: "Interactive robotics",
+    movietitle: "Interactive robotics",
+    status: 0,
+    workshop: "No workshop",
+    desc: "Interactive robotics",
+    sTags: ["Electronics"],
+    dTags: ["Generative art"],
+    country: "Tartu",
+    url: "https://docs.google.com/document/d/1tmn3O3Nau4DwxkBk8TffBvZ1i3_F1MAW8Frh2FlK3sw/edit#heading=h.m2j1dbahk9ax"
+  },
+  {
     title: "Pottery Simulator",
     movietitle: "Blame it on the Oven",
     status: 0,
