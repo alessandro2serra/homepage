@@ -384,13 +384,12 @@ export default [
   {
     title: "Scaling",
     movietitle: "Honey, I shrunk the...",
-    status: 2,
+    status: 3,
     workshop: "No workshop",
     desc: "Scaling from Gulliver to Meirelles to AR",
     sTags: ["Math", "Geometry"],
     dTags: ["Inclusive design"],
-    url:
-      "https://docs.google.com/document/d/1XRSWG1_K6ywmj2eyJRaLfBfDxUxEOO9kw_1CriHrMPs/edit#heading=h.etpbq8nkojs9",
+    url: './scaling',
     tools: [
       {
         title: "Kazimir Malevich simulator?",
@@ -410,7 +409,8 @@ export default [
     desc: "Model anything using just a plain paper",
     sTags: ["Math", "Geometry"],
     dTags: ["Product design"],
-    country: "Tartu"
+    country: "Tartu",
+    url: './origami'
   },
   {
     title: "Interactive robotics",
@@ -443,10 +443,48 @@ export default [
     desc: "From Disney classics to speedy cards",
     sTags: ["Physics", "Math"],
     dTags: ["Animation"],
+    url: 'https://docs.google.com/document/d/1SL5ijB2hl1nwR5VYM9zRbKCnR8uAa0G4hyGQ2hMWZeM/edit',
     tools: [
       {
         title: "Easing visualizer",
         url: "https://designstem.github.io/easing/"
+      },
+      {
+        title: "Old easing visualizer",
+        url: "https://codepen.io/kristjanjansen/full/aVzwbZ/"
+      },
+      {
+        title: "Scenario in Estonian",
+        url: "https://docs.google.com/document/d/1PaAfTJ1iO4y9maoOr8TWL57-tEkMTNVFjEdNRyugkp4/edit#heading=h.b6gimmc4kbj8"
+      },
+      { 
+        title: 'Germany scenario',
+        url: 'https://drive.google.com/drive/u/0/folders/0B5tPq_8QtH32bXUxdS14VzlSVE0'
+      },
+    ],
+    country: "Kuressaare"
+  },
+  {
+    title: "Moiré",
+    movietitle: "...Moiré",
+    status: 0,
+    workshop: "No workshop",
+    desc: "...Moiré",
+    sTags: ["Physics", "Math"],
+    dTags: ["Animation"],
+    url: "https://docs.google.com/document/d/1-sNGv4rWDAke1pAn2H16hzgWwhidzBOTtjlz3P6AT3k/edit",
+    tools: [
+      {
+        title: "Scenario in Estonian",
+        url: "https://docs.google.com/document/d/1PaAfTJ1iO4y9maoOr8TWL57-tEkMTNVFjEdNRyugkp4/edit#heading=h.b6gimmc4kbj8"
+      },
+      {
+        title: "Interactive demo I",
+        url: "https://codepen.io/ooker/full/LOPPGx/"
+      },
+      {
+        title: "Interactive demo II",
+        url: "https://codepen.io/ooker/full/KyPJyY/"
       }
     ],
     country: "Kuressaare"
