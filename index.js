@@ -11,11 +11,12 @@ const flags = {
   Germany: '🇩🇪',
   Greece: '🇬🇷',
   Italy: '🇮🇹',
-  Kuressaare: '🇪🇪',
+  Kuressaare: '🇪🇪🇸🇲',
   Netherlands: '🇳🇱',
   Portugal: '🇵🇹',
   Slovenia: '🇸🇮',
-  Tartu: '🇪🇪',
+  Tartu: '🇪🇪🇵🇱',
+  Finland: '🇫🇮'
 }
 
 new Vue({
@@ -69,10 +70,10 @@ new Vue({
     statuses: [
       { title: "Unknown", color: "#eaeaea" },
       { title: "Needs scenario", color: "#cacaca" },
-      { title: "Has scenario", color: "var(--color-gray-medium)" },
-      { title: "Early slides", color: "var(--color-blue-dark)" },
-      { title: "Slides + interactives", color: "var(--color-purple)" },
-      { title: "Tested, needs work", color: "var(--color-red)" }
+      { title: "Has scenario", color: "var(--gray)" },
+      { title: "Early slides", color: "var(--darkblue)" },
+      { title: "Slides + interactives", color: "var(--purple)" },
+      { title: "Tested, needs work", color: "var(--red)" }
     ]
   }),
   methods: {
@@ -83,7 +84,7 @@ new Vue({
   template: `
     <div style="overflow: hidden">
       <header style="">
-        &nbsp;
+        🚜 Work in progress, launching Spring 2019
         <a href="https://github.com/designstem" style="border: none;">
         <img src="https://rawgit.com/designstem/framework/master/images/github_logo.svg" style="
           width: 1.75rem;
@@ -94,19 +95,19 @@ new Vue({
       </header>
       
       <div class="hero" style="
-       background: var(--color-gray-darker);
+       background: var(--yellow);
       ">
         <div style="display: flex">
-          <h1 style="color: var(--color-yellow)">DesignSTEM</h1>
+          <h1 style="color: var(--primary)">DesignSTEM</h1>
           <div style="margin: -2rem 0 0 0"><Art :c="6" :al="al" /></div>
         </div>
-        <h2 style="color: var(--color-yellow)">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h2>
+        <h2 style="color: var(--primary)">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h2>
       </div>
 
       <div style="
         padding: 2.5rem;
         display: flex;
-        background: var(--color-yellow);
+        background: var(--white);
       "
       >
       <div style="flex: 1; margin-right: 2rem;">
@@ -146,7 +147,7 @@ new Vue({
 
       <div style="
         padding: 2.5rem;
-        border-top: 3px solid var(--color-gray-dark)"
+        border-top: 3px solid var(--primary)"
       >
       <a id="scenarios"><h1>Scenario progress tracker</h1></a>
 
@@ -156,15 +157,15 @@ new Vue({
         <div style="flex: 1;">
           <h3>Select a STEM topic</h3>
           <div style="display: flex; flex-wrap: wrap;">
-            <a :style="{color: sTag == 'All' ? 'var(--color-red)': '', borderColor: sTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
-            <a :style="{color: sTag == tag ? 'var(--color-red)': '', borderColor: sTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
+            <a :style="{color: sTag == 'All' ? 'var(--red)': '', borderColor: sTag == 'All' ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="sTag = 'All'">All topics</a>
+            <a :style="{color: sTag == tag ? 'var(--red)': '', borderColor: sTag == tag ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in sTags" @click="sTag = tag">{{tag}}</a>
             </div>
         </div>
         <div style="flex: 1; margin-left: 0.5rem;">
           <h3>Select a design topic</h3>
           <div style="display: flex; flex-wrap: wrap;">
-            <a :style="{color: dTag == 'All' ? 'var(--color-red)': '', borderColor: dTag == 'All' ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>
-            <a :style="{color: dTag == tag ? 'var(--color-red)': '', borderColor: dTag == tag ? 'var(--color-red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
+            <a :style="{color: dTag == 'All' ? 'var(--red)': '', borderColor: dTag == 'All' ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; display: block" @click="dTag = 'All'">All topics</a>
+            <a :style="{color: dTag == tag ? 'var(--red)': '', borderColor: dTag == tag ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
           </div>
         </div>
         </div>
@@ -211,11 +212,11 @@ new Vue({
         
       </div>
 
-      <div style="width: 100vw; padding: 2rem;">
+      <div style="width: 100vw; padding: 2rem; color: var(--primary);">
 
       <a id="breakdown"><h2>Scenario breakdown by country</h2></a>
         <div v-for="c in Object.keys(flags)">
-            <div style="display: flex; padding: 1rem; border-bottom: 1px solid var(--color-gray-medium);">
+            <div style="display: flex; padding: 1rem; border-bottom: 1px solid var(--gray);">
               <div style="flex: 2">
                 {{ flags[c] }} {{ c }}
               </div>
