@@ -58,7 +58,7 @@ export default {
     <div>
       <svg :width="size" :height="size" :view-box.camel="viewBox">
         <g v-for="(o,oi) in a" :transform="t(0,0,r)">
-          <path stroke-linecap="round" stroke-linejoin="round" v-for="c in count / 2" :transform="t(0,0,(360 / a) * o)" :d="line([...points,points[0],points[1],points[2]].slice(c * 2,c * 2 + 3))" stroke="var(--color-gray-dark)" :fill="'hsla(358, 100%, 67%, ' + al + ')'" stroke-width="3" />
+          <path stroke-linecap="round" stroke-linejoin="round" v-for="c in count / 2" :transform="t(0,0,(360 / a) * o)" :d="line([...points,points[0],points[1],points[2]].slice(c * 2,c * 2 + 3))" stroke="var(--primary)" :fill="'hsla(358, 100%, 67%, ' + al + ')'" stroke-width="3" />
         </g>
       </svg>    
     </div>
