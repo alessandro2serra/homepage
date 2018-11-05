@@ -1,11 +1,27 @@
 import Art from "./components/Art.js";
-import { parseSheet } from "https://designstem.github.io/framework/utils.js";
+import { parseSheet, scale } from "https://designstem.github.io/framework/utils.js";
 
 
 const unique = array => [...new Set(array)];
 const flatten = array => [].concat(...array);
 
 //import cards from "./cards.js";
+
+const Percentage2 = {
+  props: ['percentage'],
+  computed: {
+    value() { 
+      return scale(this.percentage,0,100,0,9)
+    }
+  },
+  template: `
+  <div style="font-size: 1rem;">
+    <span :style="{
+      color: i < value ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.2)'
+    }" v-for="(_,i) in 10">{{ i <= value ? 'D' : 'S' }}</span>
+  </div>
+  `
+}
 
 const Percentage = {
   props: ['percentage'],
@@ -63,9 +79,23 @@ const flags = {
   Finland: '🇫🇮'
 }
 
+const StatusTable = {
+  props: ['rows'],
+  template: `
+  <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr style="border-bottom: none" v-for="(row,i) in rows" :key="i">
+        <td style="width: 50px; padding: 0.2rem;">{{ row[0] }}</td>
+        <td style="padding: 0.2rem; color: white">{{ row[1] }}</td>
+      </tr>
+    </tbody>
+  </table>
+  `
+}
+
 const Card = {
   props: ['card', 'statuses','flags'],
-  components: { Percentage },
+  components: { Percentage2, StatusTable },
   methods: {
     go(url) {
       document.location = url;
@@ -81,7 +111,7 @@ const Card = {
       justify-content: space-between;
       transition: all 0.1s;
       cursor: pointer;
-      height: 22rem;
+      height: 18rem;
       border: 3px solid var(--darkergray);
     "
     :style="{
@@ -104,16 +134,31 @@ const Card = {
       border-bottom-left-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
     ">
-      <div>{{ statuses[card.status].title }}</div>
-      <div>{{ card.object }}</div>
-      <Percentage :percentage="card.ds" />
+      <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
+      <tbody>
+        <tr style="border-bottom: none">
+          <td style="width: 50px; padding: 0.2rem;">Status</td>
+          <td style="padding: 0.2rem; color: white"><span style="display: inline-flex; align-items: center;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.5rem; padding-right: 5px;">⬤</span>  {{ statuses[card.status].title }}</span></td>
+        </tr>
+        <tr style="border-bottom: none">
+          <td style="width: 50px; padding: 0.2rem;">Object</td>
+          <td style="padding: 0.2rem; color: white">{{ card.object }}</td>
+        </tr>
+        <tr style="border-bottom: none">
+          <td style="width: 50px; padding: 0.2rem;">D & S</td>
+          <td style="padding: 0.2rem; color: white">
+            <Percentage2 :percentage="card.ds" />
+          </td>
+        </tr>
+      </tbody>
+      </table>
     </div>
   </div>
   `
 }
 
 new Vue({
-  components: { Art, Percentage, Card },
+  components: { Art, Card },
   el: "#app",
   computed: {
     // workshops() {
@@ -165,7 +210,7 @@ new Vue({
       { title: "Unknown", color: "#eaeaea" },
       { title: "Needs scenario", color: "#cacaca" },
       { title: "Has scenario", color: "var(--gray)" },
-      { title: "Early slides", color: "var(--darkblue)" },
+      { title: "Early slides", color: "var(--blue)" },
       { title: "Slides + interactives", color: "var(--purple)" },
       { title: "Tested, needs work", color: "var(--red)" }
     ]
