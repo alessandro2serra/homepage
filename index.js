@@ -1,5 +1,4 @@
 import Art from "./components/Art.js";
-import Buttons from "https://rawgit.com/designstem/framework/master/components/Buttons.js";
 
 import cards from "./cards.js";
 
@@ -20,7 +19,7 @@ const flags = {
 }
 
 new Vue({
-  components: { Buttons, Art },
+  components: { Art },
   el: "#app",
   computed: {
     // workshops() {
