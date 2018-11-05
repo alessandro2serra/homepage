@@ -52,6 +52,7 @@ body {
   }
 }
 
+/*
 .card {
   background: var(--darkgray);
   border-radius: var(--border-radius);
@@ -89,6 +90,7 @@ body {
   font-size: 0.8rem;
   border-radius: var(--border-radius);
 }
+*/
 
 /* Tag */
 

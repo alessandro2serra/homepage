@@ -1,9 +1,54 @@
 import Art from "./components/Art.js";
+import { parseSheet } from "https://designstem.github.io/framework/utils.js";
 
-import cards from "./cards.js";
 
 const unique = array => [...new Set(array)];
 const flatten = array => [].concat(...array);
+
+//import cards from "./cards.js";
+
+const Percentage = {
+  props: ['percentage'],
+  template: `
+  <div style="
+    position: relative;
+    height: 1.5rem;
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: 2px solid rgba(255,255,255,0.1);
+  ">
+    <div :style="{
+      position: 'absolute',
+      width: percentage + '%',
+      top: '0px',
+      bottom: '0px',
+      left: '0px',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 0.3rem',
+      borderRight: '2px solid rgba(255,255,255,1)',
+      //background: 'rgba(255,255,255,0.2)'
+    }">D</div>
+    <div :style="{
+      position: 'absolute',
+      width: (100 - percentage) + '%',
+      top: '0px',
+      bottom: '0px',
+      right: '0px',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 0.35rem',
+      background: 'rgba(0,0,0,0.2)',
+      justifyContent: 'flex-end'
+    }">S</div>
+  </div>
+  `
+}
 
 const flags = {
   England: '🇬🇧',
@@ -18,8 +63,57 @@ const flags = {
   Finland: '🇫🇮'
 }
 
+const Card = {
+  props: ['card', 'statuses','flags'],
+  components: { Percentage },
+  methods: {
+    go(url) {
+      document.location = url;
+    }
+  },
+  template: `
+  <div
+    style="
+      border-radius: calc(var(--border-radius) * 1.5);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.1s;
+      cursor: pointer;
+      height: 22rem;
+      border: 3px solid var(--darkergray);
+    "
+    :style="{
+      background: statuses[card.status].color,
+      cursor: !card.url ? 'not-allowed' : 'pointer',
+    }"
+    @click="!card.disabled && card.url && go(card.url)"
+  >
+    <div style="padding: 1rem;">
+      <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
+      <h2 style="color: white; margin-top: 0.75rem">{{ card.title }}</h2>
+      <div class="tags" style="line-height: 1.5em">
+        <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
+        <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
+      </div>
+    </div>
+    <div style="
+      padding: 1rem;
+      background: var(--darkergray);
+      border-bottom-left-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    ">
+      <div>{{ statuses[card.status].title }}</div>
+      <div>{{ card.object }}</div>
+      <Percentage :percentage="card.ds" />
+    </div>
+  </div>
+  `
+}
+
 new Vue({
-  components: { Art },
+  components: { Art, Percentage, Card },
   el: "#app",
   computed: {
     // workshops() {
@@ -65,7 +159,8 @@ new Vue({
     al: 0.5,
     sTag: "All",
     dTag: "All",
-    cards: cards,
+    //cards: cards,
+    cards: [],
     statuses: [
       { title: "Unknown", color: "#eaeaea" },
       { title: "Needs scenario", color: "#cacaca" },
@@ -79,6 +174,16 @@ new Vue({
     go(url) {
       document.location = url;
     }
+  },
+  created() {
+    const id = '10bZyw9SpnslEKgQu-cqGxrJfuCCd9e8a-mly2J_ul_E'
+    fetch(
+      `https://spreadsheets.google.com/feeds/list/${id}/od6/public/values?alt=json`
+    )
+      .then(res => res.json())
+      .then(res => {
+        this.cards = parseSheet(res);
+      });
   },
   template: `
     <div style="overflow: hidden">
@@ -150,7 +255,7 @@ new Vue({
       >
       <a id="scenarios"><h1>Scenario progress tracker</h1></a>
 
-      <div style="
+      <!--div style="
         display: flex;
       ">
         <div style="flex: 1;">
@@ -167,15 +272,26 @@ new Vue({
             <a :style="{color: dTag == tag ? 'var(--red)': '', borderColor: dTag == tag ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
           </div>
         </div>
-        </div>
+      </div-->
+      
       </div>
 
-      <div class="main">
+      <div style="margin: 2.5rem;">
         <div>          
           <div v-for="workshop in workshops">
           <br />
           <a :id="workshop.replace(/\\s+/g,'-')"><h2>{{ workshop }}</h2></a>
+       
+       
           <div class="cards">
+            <Card
+              v-for="(card, i) in dCards.filter(c => c.workshop == workshop)"
+              :card="card"
+              :statuses="statuses"
+              :flags="flags"
+              :key="i"
+            />
+            <!--
             <div v-for="(card, i) in dCards.filter(c => c.workshop == workshop)" class="card" :style="{
               background: statuses[card.status].color,
               cursor: !card.url ? 'not-allowed' : 'pointer',
@@ -189,7 +305,9 @@ new Vue({
                                 
                 <h2 style="margin-top: 0.75rem">{{ card.title }}</h2>
                 
-                <!--p v-html="card.desc" style="margin-bottom: 0.5rem" /-->
+                <p v-html="card.desc" style="margin-bottom: 0.5rem" />
+
+                <Percentage v-if="card.ds" :percentage="card.ds" />
 
                 <div class="tags" style="line-height: 1.5em">
                   <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
@@ -203,6 +321,8 @@ new Vue({
                 </div>
               </div>
             </div>
+            -->
+
           </div>
 
           </div>
