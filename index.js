@@ -15,10 +15,10 @@ const Percentage2 = {
     }
   },
   template: `
-  <div style="font-size: 1rem;">
-    <span :style="{
-      color: i < value ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.2)'
-    }" v-for="(_,i) in 10">{{ i <= value ? 'D' : 'S' }}</span>
+  <div style="font-size: 0.6rem;">
+    <span style="padding-right: 0.1rem;" :style="{
+      fontSize: i <= value ? '1rem' : '0.7rem', color: i < value ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.2)'
+    }" v-for="(_,i) in 10">{{ i <= value ? '●' : '◼' }}</span>
   </div>
   `
 }
@@ -111,8 +111,8 @@ const Card = {
       justify-content: space-between;
       transition: all 0.1s;
       cursor: pointer;
-      height: 18rem;
-      border: 3px solid var(--darkergray);
+      height: 24rem;
+      border: 0px solid var(--darkergray);
     "
     :style="{
       background: statuses[card.status].color,
@@ -123,10 +123,20 @@ const Card = {
     <div style="padding: 1rem;">
       <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
       <h2 style="color: white; margin-top: 0.75rem">{{ card.title }}</h2>
+      <!--
       <div class="tags" style="line-height: 1.5em">
         <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
         <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
       </div>
+      -->
+      
+      <div style="line-height: 1.5em">
+        <div v-for="tool in JSON.parse(card.tools)">
+          <a v-if="tool.url" style="color: white; border-color: white" :href="tool.url">{{tool.title}}</a>
+          <div v-else style="color: rgba(255,255,255,0.5);">{{tool.title}}</div>
+        </div>
+      </div>
+
     </div>
     <div style="
       padding: 1rem;
@@ -137,17 +147,21 @@ const Card = {
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
         <tr style="border-bottom: none">
-          <td style="width: 50px; padding: 0.2rem;">Status</td>
-          <td style="padding: 0.2rem; color: white"><span style="display: inline-flex; align-items: center;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.5rem; padding-right: 5px;">⬤</span>  {{ statuses[card.status].title }}</span></td>
+          <td style="padding: 0; height: 25px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.75rem; padding-right: 5px;"></span></td>
+          <td style="padding: 0; height: 25px; width: 60px; vertical-align: top;">Status</td>
+          <td style="padding: 0; height: 25px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="width: 50px; padding: 0.2rem;">Object</td>
-          <td style="padding: 0.2rem; color: white">{{ card.object }}</td>
+          <td style="padding: 0; height: 25px; width: px;">{{ card.object ? '' : '⚠️' }}</td>
+          <td style="padding: 0; height: 25px; width: 60px;">DObject</td>
+          <td style="padding: 0; height: 25px;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="width: 50px; padding: 0.2rem;">D & S</td>
-          <td style="padding: 0.2rem; color: white">
-            <Percentage2 :percentage="card.ds" />
+          <td style="padding: 0; height: 25px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
+          <td style="padding: 0; height: 25px; width: 60px;">D & S</td>
+          <td style="padding: 0; height: 25px; color: white">
+            <Percentage2 v-if="card.ds" :percentage="card.ds" />
+            <span v-if="!card.ds" style="color: rgba(255,255,255,0.8)">Unknown</span>
           </td>
         </tr>
       </tbody>
@@ -207,12 +221,12 @@ new Vue({
     //cards: cards,
     cards: [],
     statuses: [
-      { title: "Unknown", color: "#eaeaea" },
-      { title: "Needs scenario", color: "#cacaca" },
+      { title: "Unknown", color: "#dadada" },
+      { title: "Writing the scenario", color: "var(--gray)" },
       { title: "Has scenario", color: "var(--gray)" },
       { title: "Early slides", color: "var(--blue)" },
-      { title: "Slides + interactives", color: "var(--purple)" },
-      { title: "Tested, needs work", color: "var(--red)" }
+      { title: "Slides + interactives", color: "var(--red)" },
+      { title: "Tested, needs work", color: "var(--purple)" }
     ]
   }),
   methods: {
@@ -324,6 +338,7 @@ new Vue({
       <div style="margin: 2.5rem;">
         <div>          
           <div v-for="workshop in workshops">
+          <br />
           <br />
           <a :id="workshop.replace(/\\s+/g,'-')"><h2>{{ workshop }}</h2></a>
        
