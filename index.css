@@ -46,7 +46,7 @@ body {
   grid-gap: 1rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr;
   }

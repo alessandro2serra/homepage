@@ -111,7 +111,7 @@ const Card = {
       justify-content: space-between;
       transition: all 0.1s;
       cursor: pointer;
-      height: 24rem;
+      height: calc(35rem - 10vw);
       border: 0px solid var(--darkergray);
     "
     :style="{
@@ -131,11 +131,12 @@ const Card = {
       -->
       
       <div style="line-height: 1.5em">
-        <div v-for="tool in JSON.parse(card.tools)">
+        <div v-for="tool in JSON.parse(card.tools ? card.tools : '[]')">
           <a v-if="tool.url" style="color: white; border-color: white" :href="tool.url">{{tool.title}}</a>
           <div v-else style="color: rgba(255,255,255,0.5);">{{tool.title}}</div>
         </div>
       </div>
+      
 
     </div>
     <div style="
@@ -147,22 +148,27 @@ const Card = {
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 25px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.75rem; padding-right: 5px;"></span></td>
-          <td style="padding: 0; height: 25px; width: 60px; vertical-align: top;">Status</td>
-          <td style="padding: 0; height: 25px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
+          <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.75rem; padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Status</td>
+          <td style="padding: 0; height: 28px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 25px; width: px;">{{ card.object ? '' : '⚠️' }}</td>
-          <td style="padding: 0; height: 25px; width: 60px;">DObject</td>
-          <td style="padding: 0; height: 25px;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
-        </tr>
-        <tr style="border-bottom: none">
-          <td style="padding: 0; height: 25px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
-          <td style="padding: 0; height: 25px; width: 60px;">D & S</td>
-          <td style="padding: 0; height: 25px; color: white">
+          <td style="padding: 0; height: 28px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">D & S</td>
+          <td style="padding: 0; height: 28px; color: white">
             <Percentage2 v-if="card.ds" :percentage="card.ds" />
             <span v-if="!card.ds" style="color: rgba(255,255,255,0.8)">Unknown</span>
           </td>
+        </tr>
+        <tr style="border-bottom: none">
+          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.object ? '' : '⚠️' }}</td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">D. object</td>
+          <td style="padding: 0; height: 28px; vertical-align: top;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
+        </tr>
+        <tr style="border-bottom: none">
+          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.problemorrelevance ? '' : '?' }}</td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Problem it&nbsp;solves&nbsp;/ relevance</td>
+          <td style="padding: 0; height: 45px; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
         </tr>
       </tbody>
       </table>
@@ -309,7 +315,7 @@ new Vue({
       </div>
 
       <div style="
-        padding: 2.5rem;
+        padding: 2.5rem 2.5rem 0 2.5rem;
         border-top: 3px solid var(--primary)"
       >
       <a id="scenarios"><h1>Scenario progress tracker</h1></a>
@@ -335,7 +341,7 @@ new Vue({
       
       </div>
 
-      <div style="margin: 2.5rem;">
+      <div style="margin: 0 2.5rem 2.5rem 2.5rem;">
         <div>          
           <div v-for="workshop in workshops">
           <br />
