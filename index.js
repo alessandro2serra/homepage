@@ -148,7 +148,7 @@ const Card = {
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="font-size: 0.75rem; padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
+          <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
           <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Status</td>
           <td style="padding: 0; height: 28px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
         </tr>
@@ -166,9 +166,9 @@ const Card = {
           <td style="padding: 0; height: 28px; vertical-align: top;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.problemorrelevance ? '' : '?' }}</td>
-          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Problem it&nbsp;solves&nbsp;/ relevance</td>
-          <td style="padding: 0; height: 45px; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
+          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.problemorrelevance ? '' : '❓' }}</td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Problem&nbsp;/ relevance</td>
+          <td style="padding: 0; height: 30px; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
         </tr>
       </tbody>
       </table>
