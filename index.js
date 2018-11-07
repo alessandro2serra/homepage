@@ -112,11 +112,6 @@ const StatusTable = {
 const Card = {
   props: ['card', 'statuses','flags'],
   components: { Percentage2, StatusTable },
-  methods: {
-    go(url) {
-      document.location = url;
-    }
-  },
   template: `
   <div
     style="
@@ -126,7 +121,6 @@ const Card = {
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.1s;
-      cursor: pointer;
       height: calc(35rem - 10vw);
       border: 0px solid var(--darkergray);
     "
@@ -134,21 +128,25 @@ const Card = {
       background: statuses[card.status].color,
       cursor: !card.url ? 'not-allowed' : 'pointer',
     }"
-    @click="!card.disabled && card.url && go(card.url)"
   >
     <div style="padding: 1rem;">
       <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
       <h2 style="color: white; margin-top: 0.75rem">{{ card.title }}</h2>
+
       <!--
       <div class="tags" style="line-height: 1.5em">
-        <div class="tag" v-for="tag in card.sTags">{{tag}}</div>
-        <div class="tag" v-for="tag in card.dTags">{{tag}}</div>
+        <div class="tag" v-for="tag in JSON.parse(card.dtags ? card.dtags : '[]')">{{tag}}</div>
+        <div class="tag" v-for="tag in JSON.parse(card.stags ? card.stags : '[]')">{{tag}}</div>
       </div>
       -->
-      
-      <div style="line-height: 1.5em">
+
+      <div v-if="card.url" style="margin-bottom: 0.1rem;">
+        <a target="_blank" style="color: white; border-color: white" :href="card.url">{{ card.url.slice(0,4) == 'http' ? 'Intial scenario' : 'Initial slides'}}</a>
+      </div>
+
+      <div style="line-height: 1.5em; opacity: 0.7">
         <div v-for="tool in JSON.parse(card.tools ? card.tools : '[]')">
-          <a v-if="tool.url" style="color: white; border-color: white" :href="tool.url">{{tool.title}}</a>
+          <a v-if="tool.url" target="_blank" style="color: white; border-color: white" :href="tool.url">{{tool.title}}</a>
           <div v-else style="color: rgba(255,255,255,0.5);">{{tool.title}}</div>
         </div>
       </div>
@@ -160,6 +158,7 @@ const Card = {
       background: var(--darkergray);
       border-bottom-left-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
+      height: 170px;
     ">
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
@@ -169,7 +168,7 @@ const Card = {
           <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">D & S</td>
+          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">Design/STEM</td>
           <td style="padding: 0; height: 28px; color: white">
             <Percentage2 v-if="card.ds" :percentage="card.ds" />
             <span v-if="!card.ds" style="color: rgba(255,255,255,0.8)">Unknown</span>
@@ -177,14 +176,14 @@ const Card = {
           <td style="padding: 0; height: 28px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">D. object</td>
+          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">Design object</td>
           <td style="padding: 0; height: 28px; vertical-align: top;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
           <td style="padding: 0; height: 28px; width: 8px; vertical-align: top;">{{ card.object ? '' : '⚠️' }}</td>
         </tr>
         <tr style="border-bottom: none">
           <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">Problem&nbsp;/ relevance</td>
-          <td style="padding: 0; height: 30px; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
-          <td style="padding: 0; height: 28px; width: 8px; vertical-align: top;">{{ card.pr ? '' : '❔' }}</td>
+          <td style="padding: 0; height: 30px; overflow: hidden; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
+          <td style="padding: 0; height: 28px; width: 8px; vertical-align: top;">{{ card.question === '?' ? '' : '❔' }}</td>
         </tr>
       </tbody>
       </table>
@@ -251,11 +250,6 @@ new Vue({
       { title: "Tested, needs work", color: "var(--purple)" }
     ]
   }),
-  methods: {
-    go(url) {
-      document.location = url;
-    }
-  },
   created() {
     const id = '10bZyw9SpnslEKgQu-cqGxrJfuCCd9e8a-mly2J_ul_E'
     fetch(
