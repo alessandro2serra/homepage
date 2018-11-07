@@ -16,6 +16,22 @@ const Percentage2 = {
   },
   template: `
   <div style="font-size: 0.6rem;">
+    <span :style="{
+      fontSize: i <= value ? '0.9rem' : '0.9rem', color: i < value ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.8)'
+    }" v-for="(_,i) in 10">{{ i <= value ? '💄' : '💥' }}</span>
+  </div>
+  `
+}
+
+const Percentage3 = {
+  props: ['percentage'],
+  computed: {
+    value() { 
+      return scale(this.percentage,0,100,0,9)
+    }
+  },
+  template: `
+  <div style="font-size: 0.6rem;">
     <span style="padding-right: 0.1rem;" :style="{
       fontSize: i <= value ? '1rem' : '0.7rem', color: i < value ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.2)'
     }" v-for="(_,i) in 10">{{ i <= value ? '●' : '◼' }}</span>
@@ -148,27 +164,27 @@ const Card = {
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
           <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Status</td>
           <td style="padding: 0; height: 28px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
+          <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
-          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">D & S</td>
+          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">D & S</td>
           <td style="padding: 0; height: 28px; color: white">
             <Percentage2 v-if="card.ds" :percentage="card.ds" />
             <span v-if="!card.ds" style="color: rgba(255,255,255,0.8)">Unknown</span>
           </td>
+          <td style="padding: 0; height: 28px; width: 8px;">{{ card.ds <= 10 || card.ds >= 90 ? '️⚠️' : '' }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.object ? '' : '⚠️' }}</td>
-          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">D. object</td>
+          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">D. object</td>
           <td style="padding: 0; height: 28px; vertical-align: top;" :style="{color: card.object ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.object ? card.object : 'Missing' }}</td>
+          <td style="padding: 0; height: 28px; width: 8px; vertical-align: top;">{{ card.object ? '' : '⚠️' }}</td>
         </tr>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: px; vertical-align: top;">{{ card.problemorrelevance ? '' : '❓' }}</td>
-          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Problem&nbsp;/ relevance</td>
+          <td style="padding: 0; height: 28px; width: 110px; vertical-align: top;">Problem&nbsp;/ relevance</td>
           <td style="padding: 0; height: 30px; vertical-align: top;" :style="{color: card.problemorrelevance ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)'}">{{ card.problemorrelevance ? card.problemorrelevance : '' }}</td>
+          <td style="padding: 0; height: 28px; width: 8px; vertical-align: top;">{{ card.pr ? '' : '❔' }}</td>
         </tr>
       </tbody>
       </table>
@@ -341,7 +357,7 @@ new Vue({
       
       </div>
 
-      <div style="margin: 0 2.5rem 2.5rem 2.5rem;">
+      <div style="margin: 0 4rem 2.5rem 4rem;">
         <div>          
           <div v-for="workshop in workshops">
           <br />
