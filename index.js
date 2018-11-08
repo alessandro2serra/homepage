@@ -121,17 +121,16 @@ const Card = {
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.1s;
-      height: calc(35rem - 10vw);
+      height: calc(33rem - 10vw);
       border: 0px solid var(--darkergray);
     "
     :style="{
       background: statuses[card.status].color,
-      cursor: !card.url ? 'not-allowed' : 'pointer',
     }"
   >
     <div style="padding: 1rem;">
       <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
-      <h2 style="color: white; margin-top: 0.75rem">{{ card.title }}</h2>
+      <h2 style="font-size: 1.5rem; color: white; margin-top: 0.75rem">{{ card.title }}</h2>
 
       <!--
       <div class="tags" style="line-height: 1.5em">
