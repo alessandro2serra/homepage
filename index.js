@@ -261,7 +261,7 @@ new Vue({
   },
   template: `
     <div style="overflow: hidden">
-      <header style="">
+      <header>
         🚜 Work in progress, launching Spring 2019
         <a href="https://github.com/designstem" style="border: none;">
         <img src="https://rawgit.com/designstem/framework/master/images/github_logo.svg" style="
@@ -279,7 +279,7 @@ new Vue({
           <h1 style="color: var(--primary)">DesignSTEM</h1>
           <div style="margin: -2rem 0 0 0"><Art :c="6" :al="al" /></div>
         </div>
-        <h2 style="color: var(--primary)">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h2>
+        <h4 style="color: var(--primary); padding-right: calc(var(--base) * 10);">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h4>
       </div>
 
       <div style="
@@ -350,7 +350,7 @@ new Vue({
       
       </div>
 
-      <div style="margin: 0 4rem 2.5rem 4rem;">
+      <div style="margin: 0 2.5rem 2.5rem 2.5rem;">
         <div>          
           <div v-for="workshop in workshops">
           <br />
@@ -415,7 +415,7 @@ new Vue({
                 {{ flags[c] }} {{ c }}
               </div>
               <div style="flex: 1">
-                <h3>{{ dCards.filter(card => card.country == c).map(card => card.title).length }}</h3>
+                <h3><span class="bullet">{{ dCards.filter(card => card.country == c).map(card => card.title).length }}</span></h3>
               </div>
               <div style="flex: 15">
                 {{ dCards.filter(card => card.country == c).map(card => card.title).join(' ') }}
