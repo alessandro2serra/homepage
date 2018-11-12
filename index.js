@@ -310,7 +310,7 @@ new Vue({
             We gathered all our custom tooling to a web framework, a MIT-licenced set of free components, styling and utilities for all the educators and creative coders to use.
           </div>
         </div>
-        <div style="flex: 1">
+        <!--div style="flex: 1">
         <a href="https://designstem.github.io/editor">
             <div class="button_primary" style="font-size: 1.2rem;">
               Content editor →
@@ -320,7 +320,7 @@ new Vue({
           <div class="intro">
             Building off the framework, here is the simple but powerful content editor, based on Markdown and our custom components.
           </div>
-        </div>
+        </div-->
       </div>
 
       <div style="
