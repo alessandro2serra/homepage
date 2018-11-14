@@ -115,15 +115,15 @@ Yo!
     { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
     { title: 'x-shift', from: -3, to: 3, value: 0, float: true },
     { title: 'y-shift', from: -3, to: 3, value: 0, float: true },
-    { title: 'rotation', from: -180, to: 180, value: 0.001, float: true },
+    { title: 'rotation', from: -180, to: 180, value:0, float: true },
   ]">
-  <f-scene slot-scope="sdata" width="1000" height="500">
-    <f-repeat-grid :step="sdata.value[0]">
-      <f-group slot-scope="rdata" :rotation="{z: sdata.value[3] }">
+  <f-scene slot-scope="sdataB" width="1000" height="500">
+    <f-repeat-grid :step="sdataB.value[0]">
+      <f-group slot-scope="rdata" :rotation="{z: sdataB.value[3] }">
           <f-box
             :points="[
               { x: 0, y: 0 },
-              { x: sdata.value[1], y: sdata.value[2] },
+              { x: sdataB.value[1], y: sdataB.value[2] },
             ]" 
             :stroke-width="1" 
           />
@@ -139,19 +139,14 @@ Yo!
 <div>
 <f-slider-data :sliders="[
     { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
-    { title: 'x-shift', from: -3, to: 3, value: 0, float: true },
-    { title: 'y-shift', from: -3, to: 3, value: 0, float: true },
     { title: 'radius', from: 0, to: 3, value: 1, float: true },
   ]">
-  <f-scene slot-scope="sdata" width="1000" height="500">
-    <f-repeat-grid :step="sdata.value[0]">
+  <f-scene slot-scope="sdataC" width="1000" height="500">
+    <f-repeat-grid :step="sdataC.value[0]">
       <f-group slot-scope="rdata">
           <f-circle
-            :points="[
-              { x: sdata.value[1], y: sdata.value[2] },
-            ]" 
             :stroke-width="1" 
-            :r = "sdata.value[3]"
+            :r = "sdataC.value[1]"
           />
       </f-group>
     </f-repeat-grid>
@@ -187,14 +182,14 @@ Yo!
 
 ---
 
-#### Too mechanic? Let's add some randomness
+#### Random?
 <div>
 <f-slider-data :sliders="[
     { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
     { title: 'x-shift', from: -3, to: 3, value: 0, float: true },
-    { title: 'y-shift', from: -3, to: 3, value: 0.02, float: true },
+    { title: 'y-shift', from: -3, to: 3, value: 0, float: true },
     { title: 'rotation', from: -180, to: 180, value: 0, float: true },
-    { title: 'randomness coeficent', from: 0, to: 2, value: 1, float: true },
+    { title: 'randomness coeficent', from: -2, to: 2, value: 0, float: true },
   ]">
   <f-scene slot-scope="sdata" width="500" height="500">
     <f-repeat-grid :step="sdata.value[0]">
