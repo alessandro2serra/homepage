@@ -1,13 +1,57 @@
-<div style="display:flex; justify-content: center; align-items: center; height: 85vh:">
-<h2 >
-<big>
-Yo!
-</big>
-</h2>
+<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;">
+  <h2>
+    Become an<br>
+    <big>Algorist!</big>
+  </h2>
+
+<code>alt+🡺</code> to move forward | <code>alt+🡸</code> to move back
+
 </div>
 
 ---
 
+| 1 2 2
+
+## Warming up...
+
+Let's start with a small warming-up exercise.
+
+-
+
+1. Take a sheet of A4 paper
+2. **Fold it in half** along the longer edge
+3. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small>
+4. From the **<u>closed edge</u> cut the paper** to the center point
+5. Unfold the paper and push it inside **<- the end here needs probably more exact instructions**
+
+---
+
+| 1 2
+
+## Nice work!
+
+You probably ended up with something like this 🡺
+
+By following the steps of cutting and folding you were following something that is called an **algorithm**.
+
+-
+
+![Origami result](./images/origami-output.jpg "Origami result")
+
+---
+
+<div class="slide-centered">
+
+<div>
+
+so...
+
+# **An Algorithm**
+#### is a __set of steps__ needed for __solving a certain problem__.
+</div>
+</div>
+
+---
 
 #### Repeating dots
 <div>
