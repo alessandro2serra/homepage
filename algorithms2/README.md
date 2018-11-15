@@ -4,7 +4,7 @@
     <big>Algorist!</big>
   </h2>
 
-<code>alt+🡺</code> to move forward | <code>alt+🡸</code> to move back
+<code>alt+RIGHT</code> to move forward | <code>alt+LEFT</code> to move back
 
 </div>
 
@@ -399,8 +399,9 @@ Let us demonstrate, that **even quite simple systems can create quite interestin
 
 ---
 
-These were some very simple examples of what a basic repetition combined with some scaling and/or rotating can generate from black and white geometric objects. 
+These were some very simple examples of what a basic repeating combined with some scaling and/or rotating can generate from black and white geometric objects. 
 
-This is just a beginning, we didn't even touch other important properties like color, stroke width, transparency and so on.
+This is just a beginning, we didn't even touch other important properties like color, stroke width, transparency and so on. 
 
 ---
+
