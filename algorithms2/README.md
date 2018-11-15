@@ -30,7 +30,7 @@ Let's start with a small warming-up exercise.
 
 ## Nice work!
 
-You probably ended up with something like that.
+Now if you fold the paper open, you probably end up with something like shown on the picture.
 
 By following these steps of cutting and folding you were following something that is called an **algorithm**.
 
@@ -60,7 +60,7 @@ By following these steps of cutting and folding you were following something tha
 
 ...probably without even noticing.
 
-These are often called **everyday algorithms**. Let's take a look at some examples. 🡺
+These are often called **everyday algorithms**. Let's take a look at some examples.
 
 Maybe the most common example of an everyday algorithm is **cooking**.
 
