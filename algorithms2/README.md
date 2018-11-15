@@ -22,7 +22,10 @@ Let's start with a small warming-up exercise.
 2. **Fold it in half** along the longer edge
 3. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small>
 4. From the **<u>closed edge</u> cut the paper** to the center point
-5. Unfold the paper and push it inside **<- the end here needs probably more exact instructions**
+5. Fold the right ‘flap’ up and down and then fold it inside itself
+6. Repeat steps 3 to 5 for each rectangle at the top left
+
+
 
 ---
 
@@ -32,7 +35,7 @@ Let's start with a small warming-up exercise.
 
 Now if you fold the paper open, you probably end up with something like shown on the picture.
 
-By following these steps of cutting and folding you were following something that is called an **algorithm**.
+By following these steps of cutting and folding you were following something that is called an **ALGORITHM**.
 
 -
 
@@ -101,7 +104,7 @@ More complex algorithms may require a lot of computing power - so much that norm
 
 -
 
-## Computer generated algorithms
+## **Computer generated** algorithms
 
 This is where the computers come to the picture - in the past years a lot of designers, artists and architects have been using computers and complex algorithms to create stunning work.
 
