@@ -58,7 +58,7 @@ By following these steps of cutting and folding you were following something tha
 
 | 1 1 2 2
 
-## Actually, we solve algorithms every day
+## Actually, we perform algorithms every day
 
 ...probably without even noticing.
 
@@ -103,7 +103,7 @@ More complex algorithms may require a lot of computing power - so much that norm
 
 -
 
-## **Computer generated** algorithms
+## **Computational power**
 
 This is where the computers come to the picture - in the past years a lot of designers, artists and architects have been using computers and complex algorithms to create stunning work.
 
@@ -167,7 +167,7 @@ The idea is based on the concept of mathematical B-splines.
 
 #### ProtoHouse by **SoftKill**
 
-Softkill Design has recently completed ProtoHouse, a prototype for the first 3D printed house, that has the same structure than human bones. 
+Softkill Design has recently completed ProtoHouse, a prototype for the first 3D printed house, that has the same structure as human bones. 
 
 ---
 
@@ -407,7 +407,16 @@ This is just a beginning, we didn't even touch other important properties like c
 
 ---
 
-Take a piece of a folded paper and the scissors. Now, your task is to create a 5 step algorithm using the tools that you were provided with.
+
+### Now as you have the information, you will become an Algorist. 
+
+-
+
+1. Take the folded paper and the scissors
+2. Using the tools that you were provided with, create a 5 step algorithm
+3. Enumerate the steps
+4. **Have fun (:**
+
 
 ---
 
