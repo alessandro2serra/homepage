@@ -18,14 +18,13 @@ Let's start with a small warming-up exercise.
 
 -
 
-1. Take a sheet of A4 paper
-2. **Fold it in half** along the longer edge
-3. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small>
-4. From the **<u>closed edge</u> cut the paper** to the center point
-5. Fold the right ‘flap’ up and down and then fold it inside itself
-6. Repeat steps 3 to 5 for each rectangle at the top left
+1. Fold a sheet of **A4 paper in half** <small>*(short edge to short edge)*</small>
+2. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small>
+3. From the **<u>closed edge</u> cut the paper** to the center point
+4. Fold the right ‘flap’ up and down and then fold it inside itself
+5. Repeat steps 3 to 5 for each rectangle at the top left
 
-
+![Origami instructions](./images/origami-instructions.jpg "Origami instructions")
 
 ---
 
