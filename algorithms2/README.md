@@ -410,12 +410,15 @@ This is just a beginning, we didn't even touch other important properties like c
 
 ### Now as you have the information, you will become an Algorist. 
 
+Let's get back to paper and scissors we started with
+
 -
 
-1. Take the folded paper and the scissors
-2. Using the tools that you were provided with, create a 5 step algorithm
-3. Enumerate the steps
-4. **Have fun (:**
+1. Take the folded paper
+2. Try to mention the steps that are used to get the folded form
+3. Add your own steps by cutting and/or folding the paper. Be creative, take risks :)
+4. Describe your steps, to create an algorithm
+5. **Have fun (:**
 
 
 ---
