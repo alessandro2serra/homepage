@@ -16,7 +16,7 @@ new Vue({
     <f-fetch-data url="./README.md">
       <f-theme slot-scope="data" theme="white">
         <f-content-editor
-          style="--emphasis: var(--yellow)"
+          style="--emphasis: var(--blue); --base: 6px;"
           :content="data.value"
         />
       </f-theme>
