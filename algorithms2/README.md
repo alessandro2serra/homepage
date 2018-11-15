@@ -30,9 +30,9 @@ Let's start with a small warming-up exercise.
 
 ## Nice work!
 
-You probably ended up with something like this 🡺
+You probably ended up with something like that.
 
-By following the steps of cutting and folding you were following something that is called an **algorithm**.
+By following these steps of cutting and folding you were following something that is called an **algorithm**.
 
 -
 
@@ -44,9 +44,9 @@ By following the steps of cutting and folding you were following something that 
 
   <div>
 
-  so...
+  so now we know, that...
 
-  # **An Algorithm**
+  # **an Algorithm**
   #### is a __set of steps__ needed for __solving a problem__.
   
   </div>
@@ -56,7 +56,7 @@ By following the steps of cutting and folding you were following something that 
 
 | 1 1 2 2
 
-## We solve algorithms every day
+## Actually, we solve algorithms every day
 
 ...probably without even noticing.
 
