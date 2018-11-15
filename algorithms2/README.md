@@ -407,3 +407,7 @@ This is just a beginning, we didn't even touch other important properties like c
 
 ---
 
+Take a piece of a folded paper and the scissors. Now, your task is to create a 5 step algorithm using the tools that you were provided with.
+
+---
+
