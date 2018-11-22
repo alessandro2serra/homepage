@@ -4,7 +4,7 @@
     <big>Algorist!</big> 
   </h2>
   
-  <div @click="send('next')" class="button button_primary">START</div>
+  <div @click="send('next')" class="button_primary">START</div>
   
 </div>
 
