@@ -9,8 +9,8 @@ for (const name in components) {
 
 Vue.prototype.$events = new Vue();
 
-// import FContentSlides2 from "./FContentSlides.js";
-//  Vue.component('FContentSlides2', FContentSlides2);
+ import TextRepeater from "./components/TextRepeater.js";
+Vue.component('TextRepeater', TextRepeater);
 
 Vue.config.devtools = true;
 
