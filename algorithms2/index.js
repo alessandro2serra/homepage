@@ -25,10 +25,16 @@ new Vue({
           style="--emphasis: var(--blue);"
           :content="data.value"
           :index="0"
-          :base="'1.5vh'"
+          :base="'1.75vh'"
         />
       </f-theme>
     </f-fetch-data>
+
+    <div style="position:absolute; top:45vh; left:0; right:0; width:100%; display:flex; justify-content:space-between; z-index:100; padding:0.1rem;" >
+      <kbd @click="send('prev');" style="cursor:pointer;">&lsaquo;</kbd>
+      <kbd @click="send('next');" style="cursor:pointer;">&rsaquo;</kbd>
+    </div>
+
   </div>
   `
 });

@@ -4,28 +4,39 @@
     <big>Algorist!</big> 
   </h2>
   
-  <div @click="send('next')" class="button_primary">START</div>
+  <div @click="send('next')" class="button_primary" style="margin-bottom: 12vh;">START ↦</div>
+
+  
+
+  <small>Navigate with arrows on left and right or with <kbd>Alt+LEFT</kbd> and <kbd>Alt+RIGHT</kbd> on keyboard.</small>
   
 </div>
 
 ---
 
-| 1 2 2
+| 1 2 
+| 3 3
 
 
 ## Warming up... 
  
 Let's start with a small warming-up exercise.
 
--
-
 1. Fold a sheet of **A4 paper in half** <small>*(short edge to short edge)*</small> 
 2. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small> 
 3. From the **<u>closed edge</u> cut the paper** to the center point 
-4. Fold the right ‘flap’ up and down and then fold it inside itself 
-5. Repeat steps 3 to 5 for each rectangle at the top left 
- 
+4. Fold the right ‘flap’ up, then back down again <small>*(to get a folding line)*</small>. Then fold the 'flap' inside itself.
+5. Repeat steps 2 to 5 for each rectangle for a few times over and over again <small>*(until the rectangles become too small to cut or fold)*</small>
+
+**Do not open the paper until you are done!**
+
+-
+
 ![Origami instructions](./images/origami-instructions.jpg "Origami instructions")
+
+-
+
+<div @click="send('prev')" class="button_secondary">&larr;</div> <div @click="send('next')" class="button_primary">Next: see the result &rarr;</div>
 
 ---
 
@@ -33,9 +44,11 @@ Let's start with a small warming-up exercise.
  
 ## Nice work! 
  
-Now if you fold the paper open, you probably end up with something like shown on the picture. 
+Now if you fold the paper open, you probably end up with something like shown on this picture. 
  
-By following these steps of cutting and folding you were following something that is called an **ALGORITHM**.
+By following the steps of cutting and folding you were following something that is called an **ALGORITHM**.
+
+<div @click="send('prev')" class="button_secondary">&larr;</div> <div @click="send('next')" class="button_primary">Next: definition &rarr;</div>
 
 -
 
@@ -45,13 +58,13 @@ By following these steps of cutting and folding you were following something tha
 
 <div class="slide-centered">
   <div>
- 
-  so now we know, that... 
- 
+  
   # an Algorithm 
   
-  #### is a __set of steps__ needed for __solving a problem__. 
-   
+  #### is a __set of certain steps__ needed to __solve a problem__. 
+  
+  <div @click="send('prev')" class="button_secondary">&larr;</div> <div @click="send('next')" class="button_primary">Next: they are everywhere &rarr;</div>
+
   </div> 
 </div>
 
