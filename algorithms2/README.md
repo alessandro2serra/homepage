@@ -1,39 +1,40 @@
-<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;">
-  <h2>
-    Become an<br>
-    <big>Algorist!</big>
+<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;"> 
+  <h2> 
+    Become an<br> 
+    <big>Algorist!</big> 
   </h2>
-
-<code>alt+RIGHT</code> to move forward | <code>alt+LEFT</code> to move back
-
+  
+  <div @click="send('next')" class="button button_primary">START</div>
+  
 </div>
 
 ---
 
 | 1 2 2
 
-## Warming up...
 
+## Warming up... 
+ 
 Let's start with a small warming-up exercise.
 
 -
 
-1. Fold a sheet of **A4 paper in half** <small>*(short edge to short edge)*</small>
-2. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small>
-3. From the **<u>closed edge</u> cut the paper** to the center point
-4. Fold the right ‘flap’ up and down and then fold it inside itself
-5. Repeat steps 3 to 5 for each rectangle at the top left
-
+1. Fold a sheet of **A4 paper in half** <small>*(short edge to short edge)*</small> 
+2. Find the **center** and mark it with a pen <small>*(don't have to be TOO precise)*</small> 
+3. From the **<u>closed edge</u> cut the paper** to the center point 
+4. Fold the right ‘flap’ up and down and then fold it inside itself 
+5. Repeat steps 3 to 5 for each rectangle at the top left 
+ 
 ![Origami instructions](./images/origami-instructions.jpg "Origami instructions")
 
 ---
 
-| 1 2
-
-## Nice work!
-
-Now if you fold the paper open, you probably end up with something like shown on the picture.
-
+| 1 2 
+ 
+## Nice work! 
+ 
+Now if you fold the paper open, you probably end up with something like shown on the picture. 
+ 
 By following these steps of cutting and folding you were following something that is called an **ALGORITHM**.
 
 -
@@ -43,70 +44,72 @@ By following these steps of cutting and folding you were following something tha
 ---
 
 <div class="slide-centered">
-
   <div>
-
-  so now we know, that...
-
-  # **an Algorithm**
-  #### is a __set of steps__ needed for __solving a problem__.
+ 
+  so now we know, that... 
+ 
+  # an Algorithm 
   
-  </div>
+  #### is a __set of steps__ needed for __solving a problem__. 
+   
+  </div> 
 </div>
 
 ---
 
-| 1 1 2 2
-
-## Actually, we perform algorithms every day
-
-...probably without even noticing.
-
-These are often called **everyday algorithms**. Let's take a look at some examples.
-
+| 1 1 2 2 
+ 
+## Actually, we perform algorithms every day 
+ 
+...probably without even noticing. 
+ 
+These are often called **everyday algorithms**. Let's take a look at some examples. 
+ 
 Maybe the most common example of an everyday algorithm is **cooking**.
 
 -
 
-![Cooking](./images/everyday-recipe.jpg "Cooking")
-
+![Cooking](./images/everyday-recipe.jpg "Cooking") 
+ 
 *You have to follow certain steps (recipe) to make a delicious meal.*
 
-
 ---
+
+| 1 1
+| 2 3
 
 ## More examples of everyday algorithms
 
 -
 
-#### Folding a t-shirt 
-
-![T-shirt folding](./images/everyday-tshirt.jpg "T-shirt folding")
-
+#### Folding a t-shirt  
+ 
+![T-shirt folding](./images/everyday-tshirt.jpg "T-shirt folding") 
+ 
 *There are more than one methods to fold a t-shirt. Every method is a "different algorithm" of t-shirt folding.*
 
 -
 
-#### Building a brick wall 
-
-![Brick wall](./images/everyday-wall.jpg "Brick wall")
-
+#### Building a brick wall  
+ 
+![Brick wall](./images/everyday-wall.jpg "Brick wall") 
+ 
 *Building a stable brick wall is based on an algorithm too: you have to put the bricks so that every other row of bricks is shifted by half compared to previous one.*
 
 ---
 
 | 1 2 2
 
-The brick wall was quite a simple example of an algorithm. It doesn't require too much of analysis to make one. 
-
+The brick wall was quite a simple example of an algorithm. It doesn't require too much of analysis to make one.  
+ 
 More complex algorithms may require a lot of computing power - so much that normally people can not manage it just by themself.
 
 -
 
-## **Computational power**
-
-This is where the computers come to the picture - in the past years a lot of designers, artists and architects have been using computers and complex algorithms to create stunning work.
-
+## **Computational power** 
+ 
+This is where the computers come to the picture - in the past years a lot of designers, artists and architects have been using computers and complex algorithms to create stunning work. 
+ 
 #### Again, let's take a look at some examples
 
 ---
@@ -117,8 +120,8 @@ This is where the computers come to the picture - in the past years a lot of des
 
 -
 
-#### Grotto set design by **Michael Hansmeyer**
-
+#### Grotto set design by **Michael Hansmeyer** 
+ 
 Grotto set design for Mozart's opera Zauberflöte, directed by Romoeo Castellucci
 
 ---
@@ -155,7 +158,7 @@ Designer Stefan Bassing has used digital modelling to create a pair of tables, m
 
 #### 'Sand Spline' - generative art by **Anders Hoff**
 
-The idea is based on the concept of mathematical B-splines. 
+The idea is based on the concept of mathematical B-splines.
 
 ---
 
@@ -167,61 +170,63 @@ The idea is based on the concept of mathematical B-splines.
 
 #### ProtoHouse by **SoftKill**
 
-Softkill Design has recently completed ProtoHouse, a prototype for the first 3D printed house, that has the same structure as human bones. 
+Softkill Design has recently completed ProtoHouse, a prototype for the first 3D printed house, that has the same structure as human bones.
 
 ---
 
-These were examples of world famous innovative creators. You may think, that probably they use some billion-dollar supercomputers plus  dark powers to make such stuff. 
-
-Let us demonstrate, that **even quite simple systems can create quite interesting results.**
-
+These were examples of world famous innovative creators. You may think, that probably they use some billion-dollar supercomputers plus  dark powers to make such stuff.  
+ 
+Let us demonstrate, that **even quite simple systems can create quite interesting results.** 
+ 
 ### But...
 
 ---
 
-### ...but first we have to understand the very basics of how computer algorithms work: 
-
-1. **INPUT:** you "feed" some parameters (variables) or data to your algorithm
-2. **PROCESSING:** algorithm does the computing
-3. **OUTPUT:** you get a result
-
-#### Let's try this with a couple of small interactive simulations on next slides
+### ...but first we have to understand the very basics of how computer algorithms work:  
+ 
+1. **INPUT:** you "feed" some parameters (variables) or data to your algorithm 
+2. **PROCESSING:** algorithm does the computing 
+3. **OUTPUT:** you get a result 
+ 
+Although algorithms may become very complex and hard to understand, some quite simple steps like repeating, size and rotation, may produce already rather interesting output.  
+ 
+#### Let's try this concept with a small interactive step-by-step simulation on next slides
 
 ---
 
 | 1 2 2
-| 3 3 3
-
+| 3 3 3 
+ 
 #### Some lines
 
 -
 
 <small>Just move the sliders and see what happens. Nothing too special here - our algorithm creates a bunch of small lines that change when parameters change. Parameters change when you move the sliders. That's it.</small>
+
 -
 
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 0.7, float: true },
-    { title: 'width', from: -1, to: 1, value: 0.02, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdata" width="600" height="500">
-    <f-repeat-grid :step="sdata.value[0]">
-      <f-group slot-scope="rdata">
-          <f-line
-            :points="[
-              { x: 0, y: 0 },
-              { x: sdata.value[1], y: 0 },
-            ]" 
-            :stroke-width="3" 
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
+<div> 
+<f-slider-data key="lines" :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 0.7, float: true }, 
+    { title: 'width', from: -1, to: 1, value: 0.02, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdata" width="600" height="500"> 
+    <f-repeat-grid :step="sdata.value[0]"> 
+      <f-group slot-scope="rdata"> 
+          <f-line 
+            :points="[ 
+              { x: 0, y: 0 }, 
+              { x: sdata.value[1], y: 0 }, 
+            ]"  
+            :stroke-width="3"  
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
 </div>
 
 ---
-
 
 | 1 2 2
 | 3 3 3
@@ -234,26 +239,26 @@ Let us demonstrate, that **even quite simple systems can create quite interestin
 
 -
 
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
-    { title: 'width', from: -3, to: 3, value: 0, float: true },
-    { title: 'rotation', from: -180, to: 180, value: 0.1, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdataR" width="600" height="500">
-    <f-repeat-grid :step="sdataR.value[0]">
-      <f-group slot-scope="rdataR" :rotation="{z: sdataR.value[2] }">
-          <f-line
-            :points="[
-              { x: 0, y: 0 },
-              { x: sdataR.value[1], y: 0 },
-            ]" 
-            :stroke-width="3" 
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
+<div> 
+<f-slider-data key="rotation" :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true }, 
+    { title: 'width', from: -3, to: 3, value: 0, float: true }, 
+    { title: 'rotation', from: -180, to: 180, value: 0.1, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdataR" width="600" height="500"> 
+    <f-repeat-grid :step="sdataR.value[0]"> 
+      <f-group slot-scope="rdataR" :rotation="{z: sdataR.value[2] }"> 
+          <f-line 
+            :points="[ 
+              { x: 0, y: 0 }, 
+              { x: sdataR.value[1], y: 0 }, 
+            ]"  
+            :stroke-width="3"  
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
 </div>
 
 ---
@@ -269,24 +274,24 @@ Let us demonstrate, that **even quite simple systems can create quite interestin
 
 -
 
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
-    { title: 'size', from: -3, to: 3, value: 1, float: true },
-    { title: 'rotation', from: -180, to: 180, value:0, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdataB" width="600" height="500">
-    <f-repeat-grid :step="sdataB.value[0]">
-      <f-group slot-scope="rdataB" :rotation="{z: sdataB.value[2] }">
-          <f-box
-            :stroke-width="1" 
-            :width = "sdataB.value[1]"
-            :height = "sdataB.value[1]"
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
+<div> 
+<f-slider-data key="squares" :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true }, 
+    { title: 'size', from: -3, to: 3, value: 1, float: true }, 
+    { title: 'rotation', from: -180, to: 180, value:0, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdataB" width="600" height="500"> 
+    <f-repeat-grid :step="sdataB.value[0]"> 
+      <f-group slot-scope="rdataB" :rotation="{z: sdataB.value[2] }"> 
+          <f-box 
+            :stroke-width="1"  
+            :width = "sdataB.value[1]" 
+            :height = "sdataB.value[1]" 
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
 </div>
 
 ---
@@ -302,48 +307,48 @@ Let us demonstrate, that **even quite simple systems can create quite interestin
 
 -
 
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 1, float: true },
-    { title: 'radius', from: 0, to: 3, value: 0.5, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdataC" width="600" height="500">
-    <f-repeat-grid :step="sdataC.value[0]">
-      <f-group slot-scope="rdataC">
-          <f-circle
-            :stroke-width="1" 
-            :r = "sdataC.value[1]"
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
-</div>
-
-<!-- ---
-
-#### A polygon
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
-    { title: 'rotation', from: -180, to: 180, value: 0, float: true },
-    { title: 'radius', from: 0, to: 3, value: 1, float: true },
-    { title: 'sides', from: 3, to: 8, value: 3, float: false },
-    
-  ]">
-  <f-scene slot-scope="sdata" width="1000" height="500">
-    <f-repeat-grid :step="sdata.value[0]">
-      <f-group slot-scope="rdata">
-          <f-regularpolygon
-            :rotation="{ z: sdata.value[1] }"
-            :count="sdata.value[3]"
-            :stroke-width="1" 
-            :r = "sdata.value[2]"
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
+<div> 
+<f-slider-data key="circles" :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 1, float: true }, 
+    { title: 'radius', from: 0, to: 3, value: 0.5, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdataC" width="600" height="500"> 
+    <f-repeat-grid :step="sdataC.value[0]"> 
+      <f-group slot-scope="rdataC"> 
+          <f-circle 
+            :stroke-width="1"  
+            :r = "sdataC.value[1]" 
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
+</div> 
+ 
+<!-- --- 
+ 
+#### A polygon 
+<div> 
+<f-slider-data :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true }, 
+    { title: 'rotation', from: -180, to: 180, value: 0, float: true }, 
+    { title: 'radius', from: 0, to: 3, value: 1, float: true }, 
+    { title: 'sides', from: 3, to: 8, value: 3, float: false }, 
+     
+  ]"> 
+  <f-scene slot-scope="sdata" width="1000" height="500"> 
+    <f-repeat-grid :step="sdata.value[0]"> 
+      <f-group slot-scope="rdata"> 
+          <f-regularpolygon 
+            :rotation="{ z: sdata.value[1] }" 
+            :count="sdata.value[3]" 
+            :stroke-width="1"  
+            :r = "sdata.value[2]" 
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
 </div> -->
 
 ---
@@ -359,67 +364,65 @@ Let us demonstrate, that **even quite simple systems can create quite interestin
 
 -
 
-<div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 1, float: true },
-    { title: 'radius', from: 0, to: 3, value: 0.5, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdataC" width="600" height="500">
-    <f-repeat-grid :step="sdataC.value[0]">
-      <f-group slot-scope="rdataC">
-          <f-circle
-            :stroke-width="1" 
-            :r = "random(0, sdataC.value[1], true)"
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
-</div>
-
-<!-- <div>
-<f-slider-data :sliders="[
-    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true },
-    { title: 'width', from: -3, to: 3, value: 0, float: true },
-    { title: 'rotation', from: -180, to: 180, value: 0, float: true },
-  ]" class="layout-hack">
-  <f-scene slot-scope="sdataX" width="600" height="500">
-    <f-repeat-grid :step="sdataX.value[0]">
-      <f-group slot-scope="rdataX" :rotation="{z: random(0, sdataX.value[2], true) }">
-          <f-line
-            :points="[
-              { x: 0, y: 0 },
-              { x: sdataX.value[1], y: 0 },
-            ]" 
-            :stroke-width="3" 
-          />
-      </f-group>
-    </f-repeat-grid>
-  </f-scene>
-</f-slider-data>
+<div> 
+<f-slider-data key="random" :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 1, float: true }, 
+    { title: 'radius', from: 0, to: 3, value: 0.5, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdataC" width="600" height="500"> 
+    <f-repeat-grid :step="sdataC.value[0]"> 
+      <f-group slot-scope="rdataC"> 
+          <f-circle 
+            :stroke-width="1"  
+            :r = "random(0, sdataC.value[1], true)" 
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
+</div> 
+ 
+<!-- <div> 
+<f-slider-data :sliders="[ 
+    { title: 'step', from: 0.1, to: 2, value: 0.5, float: true }, 
+    { title: 'width', from: -3, to: 3, value: 0, float: true }, 
+    { title: 'rotation', from: -180, to: 180, value: 0, float: true }, 
+  ]" class="layout-hack"> 
+  <f-scene slot-scope="sdataX" width="600" height="500"> 
+    <f-repeat-grid :step="sdataX.value[0]"> 
+      <f-group slot-scope="rdataX" :rotation="{z: random(0, sdataX.value[2], true) }"> 
+          <f-line 
+            :points="[ 
+              { x: 0, y: 0 }, 
+              { x: sdataX.value[1], y: 0 }, 
+            ]"  
+            :stroke-width="3"  
+          /> 
+      </f-group> 
+    </f-repeat-grid> 
+  </f-scene> 
+</f-slider-data> 
 </div> -->
 
 ---
 
-These were some very simple examples of what a basic repeating combined with some scaling and/or rotating can generate from black and white geometric objects. 
-
-This is just a beginning, we didn't even touch other important properties like color, stroke width, transparency and so on. 
+These were some very simple examples of what a basic repeating combined with some scaling and/or rotating can generate from black and white geometric objects.  
+ 
+This is just a beginning, we didn't even touch other important properties like color, stroke width, transparency and so on.
 
 ---
 
-
-### Now as you have the information, you will become an Algorist. 
-
+### Now as you have the information, you will become an Algorist.  
+ 
 Let's get back to paper and scissors we started with
 
 -
 
-1. Take the folded paper
-2. Try to mention the steps that are used to get the folded form
-3. Add your own steps by cutting and/or folding the paper. Be creative, take risks :)
-4. Describe your steps, to create an algorithm
+1. Take the folded paper 
+2. Try to mention the steps that are used to get the folded form 
+3. Add your own steps by cutting and/or folding the paper. Be creative, take risks :) 
+4. Describe your steps, to create an algorithm 
 5. **Have fun (:**
-
 
 ---
 
