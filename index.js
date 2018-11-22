@@ -121,7 +121,7 @@ const Card = {
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.1s;
-      height: calc(33rem - 10vw);
+      height: calc(22rem - 10vw);
       border: 0px solid var(--darkergray);
     "
     :style="{
@@ -152,17 +152,17 @@ const Card = {
       
 
     </div>
-    <div style="
-      padding: 1rem;
+    <!--div style="
+      padding: 0.75rem;
       background: var(--darkergray);
       border-bottom-left-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
-      height: 170px;
+      height: 50px;
     ">
       <table style="font-size: 0.9rem; width: 100%; border-collapse: collapse">
       <tbody>
         <tr style="border-bottom: none">
-          <td style="padding: 0; height: 28px; width: 70px; vertical-align: top;">Status</td>
+          <td style="padding: 0; height: 28px; width: 70px; vertical-align: center;">Status</td>
           <td style="padding: 0; height: 28px;" :style="[{ color: statuses[card.status].color }]">{{ statuses[card.status].title }}</td>
           <td style="padding: 0; height: 28px; width: 8px;"><span :style="[{ color: statuses[card.status].color }]" style="padding-right: 5px;">{{ card.status == 0 ? '️⚠️' : '' }}</span></td>
         </tr>
@@ -186,7 +186,7 @@ const Card = {
         </tr>
       </tbody>
       </table>
-    </div>
+    </div-->
   </div>
   `
 }
