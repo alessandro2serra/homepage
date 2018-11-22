@@ -290,7 +290,7 @@ Although algorithms may become very complex and hard to understand, some quite s
 <div> 
 <f-slider-data key="squares" :sliders="[ 
     { title: 'step', from: 0.1, to: 2, value: 0.5, float: true }, 
-    { title: 'size', from: -3, to: 3, value: 1, float: true }, 
+    { title: 'size', from: -3, to: 3, value: 0.45, float: true }, 
     { title: 'rotation', from: -180, to: 180, value:0, float: true }, 
   ]" class="layout-hack"> 
   <f-scene slot-scope="sdataB" width="600" height="500"> 
