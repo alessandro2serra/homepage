@@ -1,6 +1,7 @@
 
 import * as components from "https://designstem.github.io/framework/framework.js";
 import * as utils from "https://designstem.github.io/framework/utils.js";
+import Init from "https://designstem.github.io/framework/components/Init.js";
 
 
 for (const name in components) {
@@ -9,14 +10,14 @@ for (const name in components) {
 
 Vue.prototype.$events = new Vue();
 
- import TextRepeater from "./components/TextRepeater.js";
-Vue.component('TextRepeater', TextRepeater);
+//import TextRepeater from "./components/TextRepeater.js";
+//Vue.component('TextRepeater', TextRepeater);
 
 Vue.config.devtools = true;
 
-new Vue({
+new Vue({mixins: [Init],
   el: "#app",
-  methods: utils,
+  methods: { ...utils },
   template: `
   <div>
     <f-fetch-data url="./README.md">
@@ -30,10 +31,10 @@ new Vue({
       </f-theme>
     </f-fetch-data>
 
-    <div style="position:absolute; top:45vh; left:0; right:0; width:100%; display:flex; justify-content:space-between; z-index:100; padding:0.1rem;" >
-      <kbd @click="send('prev');" style="cursor:pointer;">&lsaquo;</kbd>
-      <kbd @click="send('next');" style="cursor:pointer;">&rsaquo;</kbd>
-    </div>
+    <!-- <div style="position:absolute; top:45vh; left:0; right:0; width:100%; display:flex; justify-content:space-between; z-index:100; padding:0.1rem; pointer-events: none;" >
+      <kbd v-on:click="send('prev');" style="cursor:pointer;pointer-events: auto;">&lsaquo;</kbd>
+      <kbd v-on:click="send('next');" style="cursor:pointer;pointer-events: auto;">&rsaquo;</kbd>
+    </div> -->
 
   </div>
   `

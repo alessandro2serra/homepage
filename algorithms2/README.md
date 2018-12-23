@@ -4,11 +4,10 @@
     <big>Algorist!</big> 
   </h2>
   
-  <div @click="send('next')" class="button_primary" style="margin-bottom: 12vh;">START ↦</div>
+  <button v-on:click="send('next')" class="primary" style="margin-bottom: 12vh;">START ↦</button>
 
-  
 
-  <small>Navigate with arrows on left and right or with <kbd>Alt+LEFT</kbd> and <kbd>Alt+RIGHT</kbd> on keyboard.</small>
+  <!-- <small>Navigate with arrows on left and right or with <kbd>Alt+LEFT</kbd> and <kbd>Alt+RIGHT</kbd> on keyboard.</small> -->
   
 </div>
 
@@ -35,9 +34,9 @@ Let's start with a small warming-up exercise.
 ![Origami instructions](./images/origami-instructions.jpg "Origami instructions")
 
 -
-
-<div @click="send('prev')" class="button_secondary">&larr;</div> <div @click="send('next')" class="button_primary">Next: see the result &rarr;</div>
-
+<f-inline>
+  <div v-on:click="send('prev')" class="secondary">&larr;</div> <div v-on:click="send('next')" class="primary">Next: see the result &rarr;</div>
+</f-inline>
 ---
 
 | 1 2 
@@ -439,7 +438,7 @@ Let's get back to paper and scissors we started with
 
 ---
 
-<text-repeater />
+<!-- <text-repeater /> -->
 
 ---
 
