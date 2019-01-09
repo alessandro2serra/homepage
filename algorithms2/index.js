@@ -1,7 +1,7 @@
 
-import * as components from "https://designstem.github.io/framework/framework.js";
-import * as utils from "https://designstem.github.io/framework/utils.js";
-import Init from "https://designstem.github.io/framework/components/Init.js";
+import * as components from "https://designstem.github.io/fachwerk/components.js";
+import * as utils from "https://designstem.github.io/fachwerk/utils.js";
+import { Init } from "https://designstem.github.io/fachwerk/mixins.js";
 
 
 for (const name in components) {

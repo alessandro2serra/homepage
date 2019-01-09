@@ -432,7 +432,7 @@ new Vue({
           </a>.
         </p>
       </div>
-      <img src="https://rawgit.com/designstem/framework/master/images/erasmus_logo.svg" style="width:240px" />
+      <img src="https://designstem.github.io/fachwerk/images/erasmus_logo.svg" style="width:240px" />
     </div>
 
     </div>

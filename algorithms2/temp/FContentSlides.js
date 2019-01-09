@@ -1,5 +1,5 @@
 import Markdown from "./Markdown.js";
-import { parseColumns } from "https://designstem.github.io/framework/utils.js";
+import { parseColumns } from "https://designstem.github.io/fachwerk/utils.js";
 
 export default {
   tag: "Layout",

@@ -1,7 +1,7 @@
-import Render from "https://designstem.github.io/framework/components/Render.js";
+import { FRender } from "https://designstem.github.io/fachwerk/components.js";
 
 export default {
-  components: { Render },
+  components: { FRender },
   props: ["content"],
   methods: { marked },
   computed: {
@@ -13,7 +13,7 @@ export default {
   },
   template: `
   <div>
-    <Render :t="'<div>' + marked(processedContent, { breaks: true }) + '</div>'" />
+    <f-render :t="'<div>' + marked(processedContent, { breaks: true }) + '</div>'" />
   </div>
   `
 };
