@@ -7,7 +7,7 @@ for (const name in components) {
 
 new Vue({
   el: "#app",
-  methods: utils,
+  methods: { ...utils },
   template: `
   <f-theme>
     <f-content-editor style="--font-mono: monospace;" autosave-id="offline" />

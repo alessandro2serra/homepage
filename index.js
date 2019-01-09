@@ -1,5 +1,5 @@
 import Art from "./components/Art.js";
-import { parseSheet, scale } from "https://designstem.github.io/framework/utils.js";
+import { parseSheet, scale } from "https://designstem.github.io/fachwerk/utils.js";
 
 
 const unique = array => [...new Set(array)];
