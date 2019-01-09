@@ -140,7 +140,7 @@ const Card = {
       -->
 
       <div v-if="card.url" style="margin-bottom: 0.1rem;">
-        <a target="_blank" style="color: white; border-color: white" :href="card.url">Slides or scenario</a>
+        <a target="_blank" style="color: white; border-color: white" :href="card.url">Slides</a>
       </div>
 
       <div style="line-height: 1.5em; opacity: 0.7">
