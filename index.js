@@ -263,13 +263,7 @@ new Vue({
     <div style="overflow: hidden">
       <header>
         🚜 Work in progress, launching Spring 2019
-        <a href="https://github.com/designstem" style="border: none;">
-        <img src="https://rawgit.com/designstem/framework/master/images/github_logo.svg" style="
-          width: 1.75rem;
-          height: 1.75rem;
-          opacity: 0.7;
-        " />
-        </a>
+        <f-github-icon src="https://designstem.github.io/fachwerk"></f-github-icon>
       </header>
       
       <div class="hero" style="
@@ -300,9 +294,9 @@ new Vue({
           </div>
         </div>
         <div style="flex: 1; margin-right: 2rem;">
-          <a href="https://designstem.github.io/framework">
+          <a href="https://designstem.github.io/fachwerk">
             <div class="button_primary" style="font-size: 1.2rem;">
-            Web framework →
+            Fachwerk web framework →
             </div>
           </a>
           <br><br>
