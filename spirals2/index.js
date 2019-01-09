@@ -1,4 +1,4 @@
-import * as components from "./offline/framework.js";
+import * as components from "./offline/components.js";
 import * as utils from "./offline/utils.js";
 
 for (const name in components) {
