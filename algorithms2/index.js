@@ -23,10 +23,9 @@ new Vue({mixins: [Init],
     <f-fetch-data url="./README.md">
       <f-theme slot-scope="data">
         <f-content-slides
-          style="--emphasis: var(--blue);"
           :content="data.value"
           :index="0"
-          :base="'1.75vh'"
+          :base="'1.5vh'"
         />
       </f-theme>
     </f-fetch-data>
