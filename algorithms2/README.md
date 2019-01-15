@@ -1,5 +1,5 @@
 
-<!-- <div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;">  -->
+<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;">
 
 # Become an <br /><big><big><big>Algorist!</big></big></big>
   
@@ -9,8 +9,7 @@
 <big><big><f-next-button title="START" /></big></big>
 
   <!-- <small>Navigate with arrows on left and right or with <kbd>Alt+LEFT</kbd> and <kbd>Alt+RIGHT</kbd> on keyboard.</small> -->
-  
-<!-- </div> -->
+</div>
 
 ---
 
@@ -61,9 +60,7 @@ By following the steps of cutting and folding you were following something that 
 
 ---
 
-| 1 2 2 2
-
--
+<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; height: 85vh;">
 
 # <big>an Algorithm</big>
   
@@ -72,7 +69,7 @@ By following the steps of cutting and folding you were following something that 
 <br /><br />
 
 <f-prev-button /> <f-next-button title="Next: they are everywhere!" />
-
+</div>
   
 
 ---
@@ -124,7 +121,7 @@ Maybe the most common example of an everyday algorithm is ***cooking***.
 <f-hr />
 <br />
 
-<center><f-prev-button /> <f-next-button title="Next: computer algorithms" /></center>
+<f-prev-button /> <f-next-button title="Next: computer algorithms" />
 
 
 ---
