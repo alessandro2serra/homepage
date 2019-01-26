@@ -1,11 +1,15 @@
-import { round } from "./offline/utils.js";
+
+import * as utils from "https://designstem.github.io/fachwerk/utils.js";
+
+
+
 export default {
   props: {
     pointCount: { default: 36, type: Number },
     padding: { default: 20, type: Number },
     cycles: { default: 3, type: Number },
     startX: { default: 20, type: Number },
-    activePoint: { default:30 , type: Number },
+    activePoint: { default:20 , type: Number },
     r: { default:2 , type: Number },
     info: { default:false , type: Boolean },
   },
@@ -28,6 +32,7 @@ export default {
             temp.push(coords);
           } 
         }
+        //this.set('totalpoints', this.pointCount * this.cycles);
         return temp;
       },
       computedTriangle() {
@@ -37,13 +42,13 @@ export default {
       }
   },
   methods: {
-    round,
+    ...utils
   },
   template: `
     <g>
       <circle r="3" />
       <path
-        :d="d3Line( computedPoints)"
+        :d="d3Line(computedPoints)"
         stroke="black"
         stroke-width="1"
         stroke-linecap="round"
