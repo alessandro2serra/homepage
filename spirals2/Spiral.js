@@ -10,7 +10,7 @@ export default {
     cycles: { default: 3, type: Number },
     startX: { default: 20, type: Number },
     activePoint: { default:20 , type: Number },
-    r: { default:2 , type: Number },
+    r: { default:3 , type: Number },
     info: { default:false , type: Boolean },
   },
   computed: {
@@ -55,10 +55,13 @@ export default {
         stroke-linejoin="round"
         fill="none"
       />
-      <circle v-for="p in computedPoints"
+      <circle v-for="(p,i) in computedPoints"
         :cx="p[0]"
         :cy="p[1]"
         :r="r"
+        stroke="rgba(0,0,0,0)"
+        stroke-width="6"
+        v-on:click="activePoint = i"
       />
       <circle 
         :cx="computedPoints[activePoint][0]"

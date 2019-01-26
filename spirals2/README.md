@@ -59,7 +59,6 @@ Any point on a circle can be described through <f-sidebar width="60vw" src="./Ma
     from="0"
     to="20" 
 />
-
 <f-slider 
     title="Spiral growth"
     :value="20" 
@@ -67,15 +66,14 @@ Any point on a circle can be described through <f-sidebar width="60vw" src="./Ma
     from="0"
     to="200" 
 />
-
-<f-slider 
+<!-- <f-slider 
     title="Active point"
     :value="8" 
     v-on:value="i => set('active', i)"
     from="0"
     :to="get('cycles')*36"
     :step="1" 
-/>
+/> -->
 
 -
 
@@ -87,7 +85,7 @@ Any point on a circle can be described through <f-sidebar width="60vw" src="./Ma
           :cycles="get('cycles')" 
           :padding="get('padding')" 
           :startX="get('radius', 100)" 
-          :activePoint="get('active', 8)" 
+          
           :info="true" 
 
           />
