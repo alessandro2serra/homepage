@@ -1,4 +1,7 @@
 # Spirals
+
+> This is a place for spirals scenario. Right now no real content yet. 
+
 ## Equations of 2D Archimedian spirals
 
 Assume that a point is described by its ***polar coordinates (r, θ)***. Remember that **r is the radius**, the distance of the point from the center of the axes and **θ is the angle** formed between the radius and x axis (see next figure).
@@ -86,9 +89,7 @@ Any point on a circle can be described through <f-sidebar width="60vw" src="./Ma
     :step="1" 
 /> -->
 
-<br>
 
-<f-next-button />
 
 -
 
