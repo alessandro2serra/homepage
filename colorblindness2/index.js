@@ -10,6 +10,8 @@ for (const name in components) {
 
 import ImageCompare from "./components/ImageCompare.js";
 Vue.component('ImageCompare', ImageCompare);
+import ColorblindnessSimulator from "./components/ColorblindnessSimulator.js";
+Vue.component('ColorblindnessSimulator', ColorblindnessSimulator);
 
 new Vue({
   // Attaching Vue to <div id="app"></div>
@@ -35,7 +37,7 @@ new Vue({
   template: `                         
   
   <f-fetch-data url="./index.md">
-    <f-content-document
+    <f-content 
       slot-scope="data"
       :content="data.value"
     />

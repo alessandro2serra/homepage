@@ -1,9 +1,25 @@
+
+# <big>Colorblindness</big>
+
+## Interactive components / simulations
+
+<details>
+  <summary>Find out more</summary>
+  <h2>This content was hidden</h2>
+</details>
+
+---
+
 # Image compare
 
 <ImageCompare :before="'images/before.jpg'" :after="'images/after.jpg'" :full="false" :padding ="{left:20, right:20}" :hideAfter="false"></ImageCompare>
 
-# Hello world
+<!--<f-next-button />-->
 
-<f-scene grid>
-  <f-circle />
-</f-scene>
+---
+
+# Colorblindness<br />simulator
+
+<ColorblindnessSimulator />
+
+
