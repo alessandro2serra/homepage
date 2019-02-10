@@ -1,6 +1,5 @@
 import Art from "./components/Art.js";
-import { parseSheet, scale } from "https://designstem.github.io/fachwerk/utils.js";
-
+import { parseSheet, scale } from "https://designstem.github.io/fachwerk/fachwerk.js";
 
 const unique = array => [...new Set(array)];
 const flatten = array => [].concat(...array);
