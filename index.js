@@ -120,7 +120,7 @@ const Card = {
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.1s;
-      height: calc(24rem - 10vw);
+      height: calc(23.5rem - 10vw);
       border: 0px solid var(--darkergray);
     "
     :style="{
@@ -248,7 +248,7 @@ new Vue({
     statuses: [
       { title: "Status unknown", color: "#dadada" },
       { title: "Writing the scenario", color: "var(--gray)" },
-      { title: "Has Google doc", color: "var(--gray)" },
+      { title: "Early work", color: "var(--gray)" },
       { title: "Has early Google slides", color: "var(--blue)" },
       { title: "Has Google slides", color: "var(--red)" },
       { title: "Has interactive slides", color: "var(--darkblue)" }
@@ -268,7 +268,11 @@ new Vue({
     <div style="overflow: hidden">
     
       <header>
-        <a href="github.com/designstem">Github</a>
+        <div>
+        <a href="https://designstem.github.io/homepage">Homepage / progress</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://designstem.github.io/scenarios">Public scenarios</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://designstem.github.io/fachwerk">Fachwerk framework</a>&nbsp;&nbsp;&nbsp;   <a href="https://github.com/designstem">Github</a>
+        </div>
       </header>
     
       <!--
@@ -344,7 +348,7 @@ new Vue({
       
         <h1><big><big>Scenario progress</big></big></h1>
       
-        <p><big><big>This page is for internal progress tracking</big></big></p>
+        <p><big><big>This page is for DesignSTEM progress tracking. For public scenarios page see <a href="https://designstem.github.io/scenarios">designstem.github.io/scenarios</a>. All scenarios will be powered by our web framework <a href="https://designstem.github.io/fachwerk">designstem.github.io/fachwerk</a></big></big></p>
 
         <div>          
           <div v-for="workshop in workshops">
