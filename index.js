@@ -82,15 +82,15 @@ const Percentage = {
 }
 
 const flags = {
-  England: '🇬🇧',
+  England: '🇬🇧+ 🇪🇪',
   Germany: '🇩🇪',
   Greece: '🇬🇷',
   Italy: '🇮🇹',
-  Kuressaare: '🇪🇪🇸🇲',
+  Kuressaare: '🇪🇪',
   Netherlands: '🇳🇱',
   Portugal: '🇵🇹',
   Slovenia: '🇸🇮',
-  Tartu: '🇪🇪🇵🇱',
+  Tartu: '🇪🇪',
   Finland: '🇫🇮'
 }
 
@@ -120,7 +120,7 @@ const Card = {
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.1s;
-      height: calc(22rem - 10vw);
+      height: calc(24rem - 10vw);
       border: 0px solid var(--darkergray);
     "
     :style="{
@@ -128,18 +128,24 @@ const Card = {
     }"
   >
     <div style="padding: 1rem;">
-      <div style="margin: -0.5rem 0 1rem 0; color: white">{{ flags[card.country] }} {{ card.country }}</div>
+      <div style="display: flex; justify-content: space-between; color: white">
+        <div>{{ flags[card.country] }} {{ card.country }}</div>
+        <div style="
+          padding: 2px 5px 0px 5px;
+          border: 2px solid rgba(255,255,255,0.5);
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 16px;
+          border-radius: 3px;
+          opacity: 0.5;
+        ">{{ statuses[card.status].title }}</div>
+      </div>
       <h2 style="font-size: 1.5rem; color: white; margin-top: 0.75rem">{{ card.title }}</h2>
 
-      <!--
-      <div class="tags" style="line-height: 1.5em">
-        <div class="tag" v-for="tag in JSON.parse(card.dtags ? card.dtags : '[]')">{{tag}}</div>
-        <div class="tag" v-for="tag in JSON.parse(card.stags ? card.stags : '[]')">{{tag}}</div>
-      </div>
-      -->
-
-      <div v-if="card.url" style="margin-bottom: 0.1rem;">
-        <a target="_blank" style="color: white; border-color: white" :href="card.url">Slides</a>
+      <a v-if="card.scenario" class="button_primary" :href="'https://designstem.github.io/scenarios/' + card.scenario">Interactive slides →</a>
+      
+      <div v-if="card.url" style="margin: 0.5rem 0 0.1rem 0;">
+        <a target="_blank" style="color: white; border-color: white" :href="card.url">Google slides</a>
       </div>
 
       <div style="line-height: 1.5em; opacity: 0.7">
@@ -240,12 +246,12 @@ new Vue({
     //cards: cards,
     cards: [],
     statuses: [
-      { title: "Unknown", color: "#dadada" },
+      { title: "Status unknown", color: "#dadada" },
       { title: "Writing the scenario", color: "var(--gray)" },
-      { title: "Has scenario", color: "var(--gray)" },
-      { title: "Early slides", color: "var(--blue)" },
-      { title: "Slides + interactives", color: "var(--red)" },
-      { title: "Tested, needs work", color: "var(--purple)" }
+      { title: "Has Google doc", color: "var(--gray)" },
+      { title: "Has early Google slides", color: "var(--blue)" },
+      { title: "Has Google slides", color: "var(--red)" },
+      { title: "Has interactive slides", color: "var(--darkblue)" }
     ]
   }),
   created() {
@@ -260,11 +266,12 @@ new Vue({
   },
   template: `
     <div style="overflow: hidden">
+    
       <header>
-        🚜 Work in progress, launching Spring 2019
-        <f-github-icon src="https://designstem.github.io/fachwerk"></f-github-icon>
+        <a href="github.com/designstem">Github</a>
       </header>
-      
+    
+      <!--
       <div class="hero" style="
        background: var(--yellow);
       ">
@@ -274,13 +281,14 @@ new Vue({
         </div>
         <h4 style="color: var(--primary); padding-right: calc(var(--base) * 10);">Science, Technology, Engineering and Math for future designers and craftsmen. Learn STEM topics in fun, visual and interactive way.</h4>
       </div>
-
+      
       <div style="
         padding: 2.5rem;
         display: flex;
         background: var(--white);
       "
       >
+      
       <div style="flex: 1; margin-right: 2rem;">
           <a href="#scenarios">
             <div class="button_primary" style="font-size: 1.2rem;">
@@ -303,17 +311,6 @@ new Vue({
             We gathered all our custom tooling to a web framework, a MIT-licenced set of free components, styling and utilities for all the educators and creative coders to use.
           </div>
         </div>
-        <!--div style="flex: 1">
-        <a href="https://designstem.github.io/editor">
-            <div class="button_primary" style="font-size: 1.2rem;">
-              Content editor →
-            </div>
-          </a>
-          <br><br>
-          <div class="intro">
-            Building off the framework, here is the simple but powerful content editor, based on Markdown and our custom components.
-          </div>
-        </div-->
       </div>
 
       <div style="
@@ -322,7 +319,7 @@ new Vue({
       >
       <a id="scenarios"><h1>Scenario progress tracker</h1></a>
 
-      <!--div style="
+      <div style="
         display: flex;
       ">
         <div style="flex: 1;">
@@ -339,16 +336,21 @@ new Vue({
             <a :style="{color: dTag == tag ? 'var(--red)': '', borderColor: dTag == tag ? 'var(--red)': ''}" style="font-weight: 600; cursor: pointer; margin: 0 10px 5px 0; display: block" v-for="tag in dTags" @click="dTag = tag">{{tag}}</a>
           </div>
         </div>
-      </div-->
-      
       </div>
+      
+      </div-->
 
-      <div style="margin: 0 2.5rem 2.5rem 2.5rem;">
+      <div style="margin: 2.5rem 2.5rem 2.5rem 2.5rem;">
+      
+        <h1><big><big>Scenario progress</big></big></h1>
+      
+        <p><big><big>This page is for internal progress tracking</big></big></p>
+
         <div>          
           <div v-for="workshop in workshops">
           <br />
           <br />
-          <a :id="workshop.replace(/\\s+/g,'-')"><h2>{{ workshop }}</h2></a>
+          <a :id="workshop.replace(/\\s+/g,'-')"><h3>{{ workshop }}</h3></a>
        
        
           <div class="cards">
