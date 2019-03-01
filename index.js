@@ -269,9 +269,10 @@ new Vue({
     
       <header>
         <div>
-        <a href="https://designstem.github.io/homepage">Homepage / progress</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://designstem.github.io/scenarios">Public scenarios</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://designstem.github.io/fachwerk">Fachwerk framework</a>&nbsp;&nbsp;&nbsp;   <a href="https://github.com/designstem">Github</a>
+        <a href="https://designstem.github.io/scenarios">Scenarios</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://designstem.github.io/homepage">Project progress</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://designstem.github.io/fachwerk">Framework</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/designstem">Github</a>
         </div>
       </header>
     
