@@ -142,7 +142,7 @@ const Card = {
       </div>
       <h2 style="font-size: 1.5rem; color: white; margin-top: 0.75rem">{{ card.title }}</h2>
 
-      <a v-if="card.scenario" class="button_primary" :href="'https://designstem.github.io/scenarios/' + card.scenario">Interactive slides →</a>
+      <a v-if="card.scenario" class="button_primary" style="border: 3px solid var(--primary); color: var(--primary); background: var(--yellow)" :href="'https://designstem.github.io/scenarios/' + card.scenario">Interactive slides →</a>
       
       <div v-if="card.url" style="margin: 0.5rem 0 0.1rem 0;">
         <a target="_blank" style="color: white; border-color: white" :href="card.url">Google slides</a>
@@ -246,12 +246,12 @@ new Vue({
     //cards: cards,
     cards: [],
     statuses: [
-      { title: "Status unknown", color: "#dadada" },
-      { title: "Writing the scenario", color: "var(--gray)" },
-      { title: "Early work", color: "var(--gray)" },
-      { title: "Has early Google slides", color: "var(--blue)" },
-      { title: "Has Google slides", color: "var(--red)" },
-      { title: "Has interactive slides", color: "var(--darkblue)" }
+      { title: "Status unknown", color: "#a1b3c4" },
+      { title: "Writing the scenario", color: "#a1b3c4" },
+      { title: "Early work", color: "#a1b3c4" },
+      { title: "Has early Google slides", color: "#a1b3c4" },
+      { title: "Needs review", color: "var(--blue)" },
+      { title: "On track", color: "var(--darkblue)" }
     ]
   }),
   created() {
